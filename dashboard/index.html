@@ -1,0 +1,539 @@
+<meta name="dash-one-writer">
+<style>
+  .sdg { display: flex; flex-direction: column; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); color: var(--color-fg); }
+  .sdg h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .sdg h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; text-wrap: balance; }
+  .sdg-head { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+  .sdg-take { margin: 0; max-width: 65ch; font-size: var(--cds-font-size-body); line-height: 1.5; }
+  .sdg-take b { font-variant-numeric: tabular-nums; }
+  .sdg-bar { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm) var(--cds-gap-md); align-items: center; }
+  .sdg-bar .dash-select { min-width: 0; max-width: 100%; }
+  .sdg-muted { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .sdg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--cds-gap-md); }
+  .sdg-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-xs); cursor: pointer; min-width: 0; }
+  .sdg-card:hover { border-color: var(--color-fg-muted); }
+  .sdg-card:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+  .sdg-card.is-active { border-color: var(--color-fg); box-shadow: inset 0 0 0 1px var(--color-fg); }
+  .sdg-goal { display: flex; align-items: center; gap: 6px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); letter-spacing: .05em; text-transform: uppercase; }
+  .sdg-goal i { width: 10px; height: 10px; border-radius: 2px; flex: none; }
+  .sdg-name { font-weight: var(--cds-font-weight-medium); }
+  .sdg-val { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .sdg-line { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+  .sdg-chg { font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); }
+  .sdg-chg.good { color: var(--color-ok); }
+  .sdg-chg.bad { color: var(--color-bad); }
+  .sdg-nodata { display: none; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .sdg-card.is-empty .sdg-nodata { display: block; }
+  .sdg-card.is-empty .sdg-line, .sdg-card.is-empty .sdg-val, .sdg-card.no-base .sdg-since { display: none; }
+  .sdg-bar label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .sdg-pick { display: flex; align-items: center; gap: var(--cds-gap-xs); min-width: 0; }
+  .sdg-sw.b { border-top-style: solid; }
+  .sdg-tablewrap { overflow-x: auto; }
+  .sdg-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: var(--cds-font-size-body); }
+  .sdg-table th, .sdg-table td { text-align: right; padding: 8px 10px; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+  .sdg-table th { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-weight: var(--cds-font-weight-medium); }
+  .sdg-table th:first-child, .sdg-table td:first-child { text-align: left; white-space: normal; }
+  .sdg-table td.lead-a, .sdg-table td.lead-b { font-weight: var(--cds-font-weight-medium); }
+  .sdg-table .yrs { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .sdg-spark { height: 36px; margin-top: var(--cds-gap-xs); }
+  .sdg-spark svg, .sdg-chart svg { display: block; overflow: visible; }
+  .sdg-detail { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
+  .sdg-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--cds-text-secondary); }
+  .sdg-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .sdg-sw { width: 16px; height: 0; border-top: 2px solid var(--color-fg); }
+  .sdg-sw.world { border-top-style: dashed; border-top-color: var(--cds-chart-reference); }
+  .sdg-chart { position: relative; min-height: 280px; }
+  .sdg-chart .tick text { fill: var(--cds-text-secondary); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); }
+  .sdg-chart .domain { stroke: var(--cds-chart-axis); }
+  .sdg-chart .tick line { stroke: var(--cds-chart-grid); }
+  .sdg-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: var(--cds-radius); padding: 6px 10px; font-size: var(--cds-font-size-caption); white-space: nowrap; font-variant-numeric: tabular-nums; z-index: 2; }
+  .sdg-tip strong { display: block; margin-bottom: 2px; }
+  .sdg-tip span { color: var(--cds-text-secondary); }
+  .sdg-empty { display: flex; align-items: center; justify-content: center; min-height: 280px; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .sdg details { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); max-width: 75ch; }
+  .sdg details summary { cursor: pointer; color: var(--color-fg); }
+  .sdg details ul { padding-left: 1.2em; display: flex; flex-direction: column; gap: 4px; }
+  [data-dash-source-state=refreshing] { opacity: .5; }
+</style>
+
+<div class="sdg">
+  <header class="sdg-head" id="overview">
+    <h1>SDG Country Tracker</h1>
+    <p class="sdg-take" data-read lang="en">Since 2015, <b data-draw="cname">—</b> has improved on <b data-draw="improving" data-source="summary" data-field="improving" data-row="0">—</b> of the <b data-draw="tracked" data-source="summary" data-field="tracked" data-row="0">—</b> headline indicators it has data for, and slipped on <b data-draw="worsening" data-source="summary" data-field="worsening" data-row="0">—</b>.</p>
+    <div class="sdg-bar">
+      <span class="sdg-pick"><label for="sdg-country">Country</label>
+      <select id="sdg-country" class="dash-select" data-draw="country" data-source="countries" aria-label="Country"></select></span>
+      <span class="sdg-pick"><label for="sdg-compare">Compare with</label>
+      <select id="sdg-compare" class="dash-select" data-draw="compare" data-source="countries" aria-label="Compare with"></select></span>
+      <span class="sdg-muted">Change is measured from 2015, when the Goals were adopted. Select a card to chart its trend.</span>
+    </div>
+  </header>
+
+  <section class="sdg-grid" id="scorecard" aria-label="Indicators">
+    <div class="sdg-card" role="button" tabindex="0" data-ind="poverty" id="card-poverty">
+      <span class="sdg-goal"><i style="background:#E5243B"></i>Goal 1 · No poverty</span>
+      <span class="sdg-name">Extreme poverty</span>
+      <span class="sdg-val" data-draw="latest" data-ind="poverty" data-source="scorecard" data-field="latest" data-where="indicator=poverty">—</span>
+      <span class="sdg-line">% of people under $2.15 a day, <span data-draw="year" data-ind="poverty" data-source="scorecard" data-field="latest_year" data-where="indicator=poverty">—</span></span>
+      <span class="sdg-line sdg-since"><span class="sdg-chg" data-draw="change" data-ind="poverty" data-source="scorecard" data-field="change" data-where="indicator=poverty">—</span> since <span data-draw="base" data-ind="poverty" data-source="scorecard" data-field="base_year" data-where="indicator=poverty">—</span></span>
+      <span class="sdg-nodata">No data reported for this country.</span>
+      <span class="sdg-line">World <span data-draw="world" data-ind="poverty" data-source="scorecard" data-field="world_latest" data-where="indicator=poverty">—</span> · ahead of <span data-draw="pct" data-ind="poverty" data-source="scorecard" data-field="pct_ahead" data-where="indicator=poverty">—</span> of countries</span>
+      <div class="sdg-spark" data-draw="spark" data-ind="poverty" data-source="sdg"></div>
+    </div>
+    <div class="sdg-card" role="button" tabindex="0" data-ind="hunger" id="card-hunger">
+      <span class="sdg-goal"><i style="background:#DDA63A"></i>Goal 2 · Zero hunger</span>
+      <span class="sdg-name">Undernourishment</span>
+      <span class="sdg-val" data-draw="latest" data-ind="hunger" data-source="scorecard" data-field="latest" data-where="indicator=hunger">—</span>
+      <span class="sdg-line">% of people, <span data-draw="year" data-ind="hunger" data-source="scorecard" data-field="latest_year" data-where="indicator=hunger">—</span></span>
+      <span class="sdg-line sdg-since"><span class="sdg-chg" data-draw="change" data-ind="hunger" data-source="scorecard" data-field="change" data-where="indicator=hunger">—</span> since <span data-draw="base" data-ind="hunger" data-source="scorecard" data-field="base_year" data-where="indicator=hunger">—</span></span>
+      <span class="sdg-nodata">No data reported for this country.</span>
+      <span class="sdg-line">World <span data-draw="world" data-ind="hunger" data-source="scorecard" data-field="world_latest" data-where="indicator=hunger">—</span> · ahead of <span data-draw="pct" data-ind="hunger" data-source="scorecard" data-field="pct_ahead" data-where="indicator=hunger">—</span> of countries</span>
+      <div class="sdg-spark" data-draw="spark" data-ind="hunger" data-source="sdg"></div>
+    </div>
+    <div class="sdg-card" role="button" tabindex="0" data-ind="child_mortality" id="card-child_mortality">
+      <span class="sdg-goal"><i style="background:#4C9F38"></i>Goal 3 · Good health</span>
+      <span class="sdg-name">Under-5 mortality</span>
+      <span class="sdg-val" data-draw="latest" data-ind="child_mortality" data-source="scorecard" data-field="latest" data-where="indicator=child_mortality">—</span>
+      <span class="sdg-line">Deaths per 1,000 live births, <span data-draw="year" data-ind="child_mortality" data-source="scorecard" data-field="latest_year" data-where="indicator=child_mortality">—</span></span>
+      <span class="sdg-line sdg-since"><span class="sdg-chg" data-draw="change" data-ind="child_mortality" data-source="scorecard" data-field="change" data-where="indicator=child_mortality">—</span> since <span data-draw="base" data-ind="child_mortality" data-source="scorecard" data-field="base_year" data-where="indicator=child_mortality">—</span></span>
+      <span class="sdg-nodata">No data reported for this country.</span>
+      <span class="sdg-line">World <span data-draw="world" data-ind="child_mortality" data-source="scorecard" data-field="world_latest" data-where="indicator=child_mortality">—</span> · ahead of <span data-draw="pct" data-ind="child_mortality" data-source="scorecard" data-field="pct_ahead" data-where="indicator=child_mortality">—</span> of countries</span>
+      <div class="sdg-spark" data-draw="spark" data-ind="child_mortality" data-source="sdg"></div>
+    </div>
+    <div class="sdg-card" role="button" tabindex="0" data-ind="school_completion" id="card-school_completion">
+      <span class="sdg-goal"><i style="background:#C5192D"></i>Goal 4 · Quality education</span>
+      <span class="sdg-name">Lower-secondary completion</span>
+      <span class="sdg-val" data-draw="latest" data-ind="school_completion" data-source="scorecard" data-field="latest" data-where="indicator=school_completion">—</span>
+      <span class="sdg-line">% of young people, <span data-draw="year" data-ind="school_completion" data-source="scorecard" data-field="latest_year" data-where="indicator=school_completion">—</span></span>
+      <span class="sdg-line sdg-since"><span class="sdg-chg" data-draw="change" data-ind="school_completion" data-source="scorecard" data-field="change" data-where="indicator=school_completion">—</span> since <span data-draw="base" data-ind="school_completion" data-source="scorecard" data-field="base_year" data-where="indicator=school_completion">—</span></span>
+      <span class="sdg-nodata">No data reported for this country.</span>
+      <span class="sdg-line">World <span data-draw="world" data-ind="school_completion" data-source="scorecard" data-field="world_latest" data-where="indicator=school_completion">—</span> · ahead of <span data-draw="pct" data-ind="school_completion" data-source="scorecard" data-field="pct_ahead" data-where="indicator=school_completion">—</span> of countries</span>
+      <div class="sdg-spark" data-draw="spark" data-ind="school_completion" data-source="sdg"></div>
+    </div>
+    <div class="sdg-card" role="button" tabindex="0" data-ind="women_parliament" id="card-women_parliament">
+      <span class="sdg-goal"><i style="background:#FF3A21"></i>Goal 5 · Gender equality</span>
+      <span class="sdg-name">Women in parliament</span>
+      <span class="sdg-val" data-draw="latest" data-ind="women_parliament" data-source="scorecard" data-field="latest" data-where="indicator=women_parliament">—</span>
+      <span class="sdg-line">% of seats, <span data-draw="year" data-ind="women_parliament" data-source="scorecard" data-field="latest_year" data-where="indicator=women_parliament">—</span></span>
+      <span class="sdg-line sdg-since"><span class="sdg-chg" data-draw="change" data-ind="women_parliament" data-source="scorecard" data-field="change" data-where="indicator=women_parliament">—</span> since <span data-draw="base" data-ind="women_parliament" data-source="scorecard" data-field="base_year" data-where="indicator=women_parliament">—</span></span>
+      <span class="sdg-nodata">No data reported for this country.</span>
+      <span class="sdg-line">World <span data-draw="world" data-ind="women_parliament" data-source="scorecard" data-field="world_latest" data-where="indicator=women_parliament">—</span> · ahead of <span data-draw="pct" data-ind="women_parliament" data-source="scorecard" data-field="pct_ahead" data-where="indicator=women_parliament">—</span> of countries</span>
+      <div class="sdg-spark" data-draw="spark" data-ind="women_parliament" data-source="sdg"></div>
+    </div>
+    <div class="sdg-card" role="button" tabindex="0" data-ind="safe_water" id="card-safe_water">
+      <span class="sdg-goal"><i style="background:#26BDE2"></i>Goal 6 · Clean water</span>
+      <span class="sdg-name">Safely managed drinking water</span>
+      <span class="sdg-val" data-draw="latest" data-ind="safe_water" data-source="scorecard" data-field="latest" data-where="indicator=safe_water">—</span>
+      <span class="sdg-line">% of people, <span data-draw="year" data-ind="safe_water" data-source="scorecard" data-field="latest_year" data-where="indicator=safe_water">—</span></span>
+      <span class="sdg-line sdg-since"><span class="sdg-chg" data-draw="change" data-ind="safe_water" data-source="scorecard" data-field="change" data-where="indicator=safe_water">—</span> since <span data-draw="base" data-ind="safe_water" data-source="scorecard" data-field="base_year" data-where="indicator=safe_water">—</span></span>
+      <span class="sdg-nodata">No data reported for this country.</span>
+      <span class="sdg-line">World <span data-draw="world" data-ind="safe_water" data-source="scorecard" data-field="world_latest" data-where="indicator=safe_water">—</span> · ahead of <span data-draw="pct" data-ind="safe_water" data-source="scorecard" data-field="pct_ahead" data-where="indicator=safe_water">—</span> of countries</span>
+      <div class="sdg-spark" data-draw="spark" data-ind="safe_water" data-source="sdg"></div>
+    </div>
+    <div class="sdg-card" role="button" tabindex="0" data-ind="electricity" id="card-electricity">
+      <span class="sdg-goal"><i style="background:#FCC30B"></i>Goal 7 · Clean energy</span>
+      <span class="sdg-name">Access to electricity</span>
+      <span class="sdg-val" data-draw="latest" data-ind="electricity" data-source="scorecard" data-field="latest" data-where="indicator=electricity">—</span>
+      <span class="sdg-line">% of people, <span data-draw="year" data-ind="electricity" data-source="scorecard" data-field="latest_year" data-where="indicator=electricity">—</span></span>
+      <span class="sdg-line sdg-since"><span class="sdg-chg" data-draw="change" data-ind="electricity" data-source="scorecard" data-field="change" data-where="indicator=electricity">—</span> since <span data-draw="base" data-ind="electricity" data-source="scorecard" data-field="base_year" data-where="indicator=electricity">—</span></span>
+      <span class="sdg-nodata">No data reported for this country.</span>
+      <span class="sdg-line">World <span data-draw="world" data-ind="electricity" data-source="scorecard" data-field="world_latest" data-where="indicator=electricity">—</span> · ahead of <span data-draw="pct" data-ind="electricity" data-source="scorecard" data-field="pct_ahead" data-where="indicator=electricity">—</span> of countries</span>
+      <div class="sdg-spark" data-draw="spark" data-ind="electricity" data-source="sdg"></div>
+    </div>
+    <div class="sdg-card" role="button" tabindex="0" data-ind="unemployment" id="card-unemployment">
+      <span class="sdg-goal"><i style="background:#A21942"></i>Goal 8 · Decent work</span>
+      <span class="sdg-name">Unemployment</span>
+      <span class="sdg-val" data-draw="latest" data-ind="unemployment" data-source="scorecard" data-field="latest" data-where="indicator=unemployment">—</span>
+      <span class="sdg-line">% of labour force aged 15+, <span data-draw="year" data-ind="unemployment" data-source="scorecard" data-field="latest_year" data-where="indicator=unemployment">—</span></span>
+      <span class="sdg-line sdg-since"><span class="sdg-chg" data-draw="change" data-ind="unemployment" data-source="scorecard" data-field="change" data-where="indicator=unemployment">—</span> since <span data-draw="base" data-ind="unemployment" data-source="scorecard" data-field="base_year" data-where="indicator=unemployment">—</span></span>
+      <span class="sdg-nodata">No data reported for this country.</span>
+      <span class="sdg-line">World <span data-draw="world" data-ind="unemployment" data-source="scorecard" data-field="world_latest" data-where="indicator=unemployment">—</span> · ahead of <span data-draw="pct" data-ind="unemployment" data-source="scorecard" data-field="pct_ahead" data-where="indicator=unemployment">—</span> of countries</span>
+      <div class="sdg-spark" data-draw="spark" data-ind="unemployment" data-source="sdg"></div>
+    </div>
+    <div class="sdg-card" role="button" tabindex="0" data-ind="internet" id="card-internet">
+      <span class="sdg-goal"><i style="background:#FD6925"></i>Goal 9 · Infrastructure</span>
+      <span class="sdg-name">Internet use</span>
+      <span class="sdg-val" data-draw="latest" data-ind="internet" data-source="scorecard" data-field="latest" data-where="indicator=internet">—</span>
+      <span class="sdg-line">% of people, <span data-draw="year" data-ind="internet" data-source="scorecard" data-field="latest_year" data-where="indicator=internet">—</span></span>
+      <span class="sdg-line sdg-since"><span class="sdg-chg" data-draw="change" data-ind="internet" data-source="scorecard" data-field="change" data-where="indicator=internet">—</span> since <span data-draw="base" data-ind="internet" data-source="scorecard" data-field="base_year" data-where="indicator=internet">—</span></span>
+      <span class="sdg-nodata">No data reported for this country.</span>
+      <span class="sdg-line">World <span data-draw="world" data-ind="internet" data-source="scorecard" data-field="world_latest" data-where="indicator=internet">—</span> · ahead of <span data-draw="pct" data-ind="internet" data-source="scorecard" data-field="pct_ahead" data-where="indicator=internet">—</span> of countries</span>
+      <div class="sdg-spark" data-draw="spark" data-ind="internet" data-source="sdg"></div>
+    </div>
+  </section>
+
+  <section class="sdg-detail" id="trend">
+    <h2><span data-draw="ind-name" data-source="indicators" data-field="name">—</span> over time</h2>
+    <span class="sdg-muted" data-draw="ind-unit" data-source="indicators" data-field="unit">—</span>
+    <div class="sdg-legend">
+      <span><i class="sdg-sw" data-draw="swatch"></i><span data-draw="cname">—</span></span>
+      <span class="sdg-leg-b"><i class="sdg-sw b" data-draw="swatch-b"></i><span data-draw="bname">—</span></span>
+      <span><i class="sdg-sw world"></i>World</span>
+    </div>
+    <div class="sdg-chart" data-draw="trend" data-source="sdg"></div>
+  </section>
+
+  <section class="sdg-detail sdg-compare" id="compare">
+    <h2><span data-draw="cname">—</span> compared with <span data-draw="bname">—</span></h2>
+    <p class="sdg-take" data-read lang="en"><span data-draw="cname">—</span> is ahead on <b data-draw="a_ahead" data-source="h2h" data-field="a_ahead" data-row="0">—</b> of the <b data-draw="both" data-source="h2h" data-field="both" data-row="0">—</b> indicators both countries report, and <span data-draw="bname">—</span> is ahead on <b data-draw="b_ahead" data-source="h2h" data-field="b_ahead" data-row="0">—</b>. Each uses its latest year, which can differ between the two.</p>
+    <div class="sdg-tablewrap">
+      <table class="sdg-table" data-source="comparison" data-row-key="indicator">
+        <thead>
+          <tr>
+            <th data-field="name">Indicator</th>
+            <th data-field="a_latest" data-draw="th-a"></th>
+            <th data-field="b_latest" data-draw="th-b"></th>
+            <th data-field="world_latest">World</th>
+            <th>Latest years</th>
+            <th data-field="ahead">Ahead</th>
+          </tr>
+        </thead>
+        <tbody data-draw="cmp-rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <details>
+    <summary>About these numbers</summary>
+    <ul>
+      <li>All figures come from the UN SDG Global Database (unstats.un.org/sdgs/dataportal), downloaded with the series codes shown in Sources. Where both a country's own figure and the UN's globally comparable estimate exist for a year, the comparable estimate is used.</li>
+      <li>"Since 2015" compares the latest value with the first value from 2015 or later. If a country's only data is from before 2015, no change is shown.</li>
+      <li>"Ahead of" is the share of other countries whose latest value since 2015 is worse. For poverty, hunger, child deaths and unemployment, lower is better.</li>
+      <li>Countries report on different schedules, so the latest year varies by country and indicator.</li>
+    </ul>
+  </details>
+</div>
+
+<script>
+  const BASE_YEAR = 2015;
+  const r1 = (v) => Math.round(v * 10) / 10;
+
+  dash.calc('scorecard', {
+    title: 'Scorecard for the chosen country',
+    description: 'For each indicator: the latest value, its change since 2015, the world figure and the share of countries it is ahead of.',
+    inputs: ['sdg', 'indicators'],
+    fn: (sdg, indicators) => {
+      const country = dash.params().country;
+      return indicators.map((ind) => {
+        const lower = ind.better === 'lower';
+        const rows = sdg.filter((r) => r.indicator === ind.indicator);
+        const series = (pick) => rows.filter(pick).map((r) => ({ year: +r.year, value: +r.value })).sort((a, b) => a.year - b.year);
+        const mine = series((r) => r.country === country && r.m49 !== '1');
+        const world = series((r) => r.m49 === '1');
+        const last = mine[mine.length - 1];
+        const base = last ? mine.find((p) => p.year >= BASE_YEAR && p.year < last.year) : null;
+        const latestBy = new Map();
+        for (const r of rows) {
+          if (r.m49 === '1' || +r.year < BASE_YEAR) continue;
+          const p = latestBy.get(r.country);
+          if (!p || +r.year > p.year) latestBy.set(r.country, { year: +r.year, value: +r.value });
+        }
+        let pct = null;
+        if (last && last.year >= BASE_YEAR) {
+          const others = [...latestBy].filter(([c]) => c !== country).map(([, p]) => p.value);
+          if (others.length) pct = Math.round(100 * others.filter((v) => (lower ? last.value < v : last.value > v)).length / others.length);
+        }
+        const change = base ? r1(last.value - base.value) : null;
+        const w = world[world.length - 1];
+        return {
+          indicator: ind.indicator,
+          latest: last ? r1(last.value) : null,
+          latest_year: last ? last.year : null,
+          base_year: base ? base.year : null,
+          change,
+          direction: change == null || change === 0 ? 'flat' : (lower ? change < 0 : change > 0) ? 'better' : 'worse',
+          world_latest: w ? r1(w.value) : null,
+          world_year: w ? w.year : null,
+          pct_ahead: pct,
+        };
+      });
+    },
+  });
+
+  dash.calc('summary', {
+    title: 'Indicators improving or slipping',
+    description: 'How many indicators with a 2015-or-later starting point have moved in the right or wrong direction for the chosen country.',
+    inputs: ['scorecard'],
+    fn: (scorecard) => {
+      const rows = scorecard || [];
+      return [{
+        tracked: rows.filter((r) => r.change != null).length,
+        improving: rows.filter((r) => r.direction === 'better').length,
+        worsening: rows.filter((r) => r.direction === 'worse').length,
+      }];
+    },
+  });
+
+  dash.calc('comparison', {
+    title: 'Two countries side by side',
+    description: 'For each indicator: the latest value for the chosen country, the comparison country and the world, and which country is ahead.',
+    inputs: ['sdg', 'indicators'],
+    fn: (sdg, indicators) => {
+      const { country, compare } = dash.params();
+      const latest = (ind, pick) => {
+        let best = null;
+        for (const r of sdg) if (r.indicator === ind && pick(r) && (!best || +r.year > best.year)) best = { year: +r.year, value: +r.value };
+        return best;
+      };
+      return indicators.map((ind) => {
+        const a = latest(ind.indicator, (r) => r.country === country && r.m49 !== '1');
+        const b = compare ? latest(ind.indicator, (r) => r.country === compare && r.m49 !== '1') : null;
+        const w = latest(ind.indicator, (r) => r.m49 === '1');
+        let ahead = null;
+        if (a && b) {
+          const av = r1(a.value), bv = r1(b.value);
+          ahead = av === bv ? 'Level' : (ind.better === 'lower' ? av < bv : av > bv) ? country : compare;
+        }
+        return {
+          indicator: ind.indicator, name: ind.name,
+          a_latest: a ? r1(a.value) : null, a_year: a ? a.year : null,
+          b_latest: b ? r1(b.value) : null, b_year: b ? b.year : null,
+          world_latest: w ? r1(w.value) : null, ahead,
+        };
+      });
+    },
+  });
+
+  dash.calc('h2h', {
+    title: 'Head-to-head count',
+    description: 'How many indicators each country leads on, among those both countries report.',
+    inputs: ['comparison'],
+    fn: (comparison) => {
+      const { country, compare } = dash.params();
+      const rows = (comparison || []).filter((r) => r.ahead != null);
+      return [{
+        both: rows.length,
+        a_ahead: rows.filter((r) => r.ahead === country).length,
+        b_ahead: rows.filter((r) => r.ahead === compare).length,
+      }];
+    },
+  });
+
+  window.sdgFmt = (v) => (v == null ? '—' : d3.format(',.1f')(v).replace(/\.0$/, ''));
+  window.sdgSigned = (v) => (v == null ? '—' : (v > 0 ? '+' : v < 0 ? '-' : '') + d3.format(',.1f')(Math.abs(v)));
+  window.sdgSeries = (rows, ind, pick) => rows
+    .filter((r) => r.indicator === ind && pick(r))
+    .map((r) => ({ year: +r.year, value: +r.value }))
+    .sort((a, b) => a.year - b.year);
+</script>
+
+<script>
+  // Select a card to chart it.
+  document.querySelectorAll('.sdg-card').forEach((card) => {
+    const pick = () => dash.setParams({ indicator: card.dataset.ind });
+    card.addEventListener('click', pick);
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); }
+    });
+  });
+
+  dash.onData(() => {
+    const p = dash.params();
+    const s = dash.data('scorecard');
+    const rows = s.status === 'ok' && s.data ? s.data : null;
+    document.querySelectorAll('.sdg-card').forEach((c) => {
+      c.classList.toggle('is-active', c.dataset.ind === p.indicator);
+      c.setAttribute('aria-pressed', String(c.dataset.ind === p.indicator));
+      const r = rows && rows.find((x) => x.indicator === c.dataset.ind);
+      c.classList.toggle('is-empty', !!r && r.latest == null);
+      c.classList.toggle('no-base', !!r && r.change == null);
+    });
+    const hasB = !!p.compare && p.compare !== p.country;
+    document.querySelectorAll('.sdg-compare').forEach((el) => { el.hidden = !hasB; });
+    document.querySelectorAll('.sdg-leg-b').forEach((el) => { el.hidden = !hasB; });
+  });
+
+  dash.draw('country', (sel) => {
+    const c = dash.data('countries');
+    const s = dash.data('sdg');
+    if (c.status !== 'ok' || s.status !== 'ok') { sel.replaceChildren(new Option('Loading countries…', '')); return; }
+    const counts = d3.rollup(s.data, (v) => new Set(v.map((r) => r.indicator)).size, (r) => r.country);
+    const byRegion = d3.group(c.data.filter((r) => (counts.get(r.country) || 0) >= 3), (r) => r.sdg_region);
+    const groups = [...byRegion].sort((a, b) => d3.ascending(a[0], b[0])).map(([region, list]) => {
+      const g = document.createElement('optgroup');
+      g.label = region;
+      list.sort((a, b) => d3.ascending(a.country, b.country)).forEach((r) => g.append(new Option(r.country, r.country)));
+      return g;
+    });
+    sel.replaceChildren(...groups);
+    sel.value = dash.params().country || '';
+    sel.onchange = () => dash.setParams({ country: sel.value });
+  });
+
+  dash.draw('compare', (sel) => {
+    const c = dash.data('countries');
+    const s = dash.data('sdg');
+    if (c.status !== 'ok' || s.status !== 'ok') { sel.replaceChildren(new Option('Loading countries…', '')); return; }
+    const counts = d3.rollup(s.data, (v) => new Set(v.map((r) => r.indicator)).size, (r) => r.country);
+    const byRegion = d3.group(c.data.filter((r) => (counts.get(r.country) || 0) >= 3), (r) => r.sdg_region);
+    const groups = [...byRegion].sort((a, b) => d3.ascending(a[0], b[0])).map(([region, list]) => {
+      const g = document.createElement('optgroup');
+      g.label = region;
+      list.sort((a, b) => d3.ascending(a.country, b.country)).forEach((r) => g.append(new Option(r.country, r.country)));
+      return g;
+    });
+    sel.replaceChildren(new Option('No comparison', ''), ...groups);
+    sel.value = dash.params().compare || '';
+    sel.onchange = () => dash.setParams({ compare: sel.value || null });
+  });
+
+  dash.draw('cname', (el) => { el.textContent = dash.params().country || '—'; });
+  dash.draw('bname', (el) => { el.textContent = dash.params().compare || '—'; });
+  dash.draw('th-a', (el) => { el.textContent = dash.params().country || ''; });
+  dash.draw('th-b', (el) => { el.textContent = dash.params().compare || ''; });
+  dash.draw('swatch-b', (el) => { el.style.borderTopColor = dash.colors[1]; });
+
+  const h2h = (el, f) => { const s = dash.data('h2h'); el.textContent = s.status === 'ok' && s.data ? String(s.data[0][f]) : '—'; };
+  dash.draw('a_ahead', (el) => h2h(el, 'a_ahead'));
+  dash.draw('b_ahead', (el) => h2h(el, 'b_ahead'));
+  dash.draw('both', (el) => h2h(el, 'both'));
+
+  dash.draw('cmp-rows', (tbody) => {
+    const s = dash.data('comparison');
+    tbody.replaceChildren();
+    if (s.status !== 'ok' || !s.data) return;
+    const { country, compare } = dash.params();
+    for (const r of s.data) {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.indicator;
+      const td = (text, cls) => { const c = document.createElement('td'); c.textContent = text; if (cls) c.className = cls; tr.append(c); };
+      td(r.name);
+      td(window.sdgFmt(r.a_latest), r.ahead === country ? 'lead-a' : '');
+      td(window.sdgFmt(r.b_latest), r.ahead === compare ? 'lead-b' : '');
+      td(window.sdgFmt(r.world_latest));
+      td(`${r.a_year ?? '—'} / ${r.b_year ?? '—'}`, 'yrs');
+      td(r.ahead ?? 'No match');
+      tbody.append(tr);
+    }
+  });
+
+  const scoreRow = (el) => {
+    const s = dash.data('scorecard');
+    return s.status === 'ok' && s.data ? s.data.find((r) => r.indicator === el.dataset.ind) : undefined;
+  };
+
+  dash.draw('latest', (el) => {
+    const r = scoreRow(el);
+    el.classList.toggle('dash-skeleton', dash.data('scorecard').status === 'loading');
+    el.textContent = r ? window.sdgFmt(r.latest) : '—';
+  });
+  dash.draw('year', (el) => { const r = scoreRow(el); el.textContent = r && r.latest_year != null ? String(r.latest_year) : '—'; });
+  dash.draw('base', (el) => { const r = scoreRow(el); el.textContent = r && r.base_year != null ? String(r.base_year) : '—'; });
+  dash.draw('change', (el) => {
+    const r = scoreRow(el);
+    el.textContent = r ? window.sdgSigned(r.change) : '—';
+    el.classList.toggle('good', !!r && r.direction === 'better');
+    el.classList.toggle('bad', !!r && r.direction === 'worse');
+  });
+  dash.draw('world', (el) => { const r = scoreRow(el); el.textContent = r ? window.sdgFmt(r.world_latest) : '—'; });
+  dash.draw('pct', (el) => { const r = scoreRow(el); el.textContent = r && r.pct_ahead != null ? r.pct_ahead + '%' : '—'; });
+
+  dash.draw('improving', (el) => { const s = dash.data('summary'); el.textContent = s.status === 'ok' && s.data ? String(s.data[0].improving) : '—'; });
+  dash.draw('tracked', (el) => { const s = dash.data('summary'); el.textContent = s.status === 'ok' && s.data ? String(s.data[0].tracked) : '—'; });
+  dash.draw('worsening', (el) => { const s = dash.data('summary'); el.textContent = s.status === 'ok' && s.data ? String(s.data[0].worsening) : '—'; });
+
+  dash.draw('spark', (el) => {
+    const s = dash.data('sdg');
+    el.replaceChildren();
+    if (s.status !== 'ok') return;
+    const country = dash.params().country;
+    const pts = window.sdgSeries(s.data, el.dataset.ind, (r) => r.country === country && r.m49 !== '1');
+    if (pts.length < 2) return;
+    const w = el.clientWidth || 200, h = 36, pad = 3;
+    const x = d3.scaleLinear().domain(d3.extent(pts, (d) => d.year)).range([pad, w - pad]);
+    const y = d3.scaleLinear().domain(d3.extent(pts, (d) => d.value)).nice().range([h - pad, pad]);
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('height', h).attr('viewBox', `0 0 ${w} ${h}`)
+      .attr('role', 'img').attr('aria-label', `Trend from ${pts[0].year} to ${pts[pts.length - 1].year}`);
+    svg.append('path').datum(pts).attr('fill', 'none').style('stroke', dash.colors[0]).attr('stroke-width', 1.5)
+      .attr('d', d3.line().x((d) => x(d.year)).y((d) => y(d.value)));
+    const end = pts[pts.length - 1];
+    svg.append('circle').attr('cx', x(end.year)).attr('cy', y(end.value)).attr('r', 2.5).style('fill', dash.colors[0]);
+  });
+
+  const indRow = () => {
+    const i = dash.data('indicators');
+    return i.status === 'ok' ? i.data.find((r) => r.indicator === dash.params().indicator) : undefined;
+  };
+  dash.draw('ind-name', (el) => {
+    const r = indRow();
+    el.textContent = r ? r.name : '—';
+    if (r) el.setAttribute('data-where', 'indicator=' + r.indicator);
+  });
+  dash.draw('ind-unit', (el) => {
+    const r = indRow();
+    el.textContent = r ? `${r.unit} · SDG indicator series ${r.series}` : '—';
+    if (r) el.setAttribute('data-where', 'indicator=' + r.indicator);
+  });
+  dash.draw('swatch', (el) => { el.style.borderTopColor = dash.colors[0]; });
+
+  dash.draw('trend', (el) => {
+    const s = dash.data('sdg');
+    el.replaceChildren();
+    if (s.status === 'error') { el.append(Object.assign(document.createElement('div'), { className: 'sdg-empty', textContent: 'Failed to load' })); return; }
+    if (s.status !== 'ok') return;
+    const { country, indicator, compare } = dash.params();
+    const ind = indRow();
+    const mine = window.sdgSeries(s.data, indicator, (r) => r.country === country && r.m49 !== '1');
+    const other = compare && compare !== country ? window.sdgSeries(s.data, indicator, (r) => r.country === compare && r.m49 !== '1') : [];
+    const world = window.sdgSeries(s.data, indicator, (r) => r.m49 === '1');
+    if (!mine.length && !world.length && !other.length) {
+      el.append(Object.assign(document.createElement('div'), { className: 'sdg-empty', textContent: `No data for ${country} on this indicator.` }));
+      return;
+    }
+    const all = mine.concat(world, other);
+    const W = el.clientWidth || 600, H = 280;
+    const pct = ind && ind.unit.startsWith('%');
+    const ymax = d3.max(all, (d) => d.value);
+    const y = d3.scaleLinear().domain([0, pct ? Math.min(100, ymax * 1.1) : ymax * 1.1]).nice().range([H - 28, 10]);
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`)
+      .attr('role', 'img').attr('aria-label', `${ind ? ind.name : 'Indicator'} for ${country}${other.length ? ', ' + compare : ''} and the world by year`);
+    const yAxis = svg.append('g').call(d3.axisLeft(y).ticks(5).tickSize(0).tickFormat(d3.format(',~f')));
+    let left = 0;
+    yAxis.selectAll('text').each(function () { left = Math.max(left, this.getComputedTextLength()); });
+    left = Math.ceil(left) + 10;
+    const x = d3.scaleLinear().domain(d3.extent(all, (d) => d.year)).range([left, W - 12]);
+    yAxis.attr('transform', `translate(${left - 4},0)`).select('.domain').remove();
+    svg.insert('g', ':first-child').selectAll('line').data(y.ticks(5)).join('line')
+      .attr('x1', left).attr('x2', W - 12).attr('y1', (d) => y(d)).attr('y2', (d) => y(d)).style('stroke', 'var(--cds-chart-grid)');
+    const span = x.domain()[1] - x.domain()[0];
+    const nTicks = Math.max(2, Math.min(span, Math.floor((W - left) / 60)));
+    svg.append('g').attr('transform', `translate(0,${H - 28})`)
+      .call(d3.axisBottom(x).ticks(nTicks).tickFormat(d3.format('d')).tickSizeOuter(0));
+    const line = d3.line().x((d) => x(d.year)).y((d) => y(d.value));
+    if (world.length) svg.append('path').datum(world).attr('fill', 'none').style('stroke', 'var(--cds-chart-reference)').attr('stroke-width', 1.5).attr('stroke-dasharray', '4 3').attr('d', line);
+    if (other.length) {
+      svg.append('path').datum(other).attr('fill', 'none').style('stroke', dash.colors[1]).attr('stroke-width', 2).attr('d', line);
+      svg.append('g').selectAll('circle').data(other).join('circle').attr('cx', (d) => x(d.year)).attr('cy', (d) => y(d.value)).attr('r', 2.5).style('fill', dash.colors[1]);
+    }
+    if (mine.length) {
+      svg.append('path').datum(mine).attr('fill', 'none').style('stroke', dash.colors[0]).attr('stroke-width', 2).attr('d', line);
+      svg.append('g').selectAll('circle').data(mine).join('circle').attr('cx', (d) => x(d.year)).attr('cy', (d) => y(d.value)).attr('r', 2.5).style('fill', dash.colors[0]);
+    }
+    const guide = svg.append('line').attr('y1', 10).attr('y2', H - 28).style('stroke', 'var(--cds-chart-axis)').style('opacity', 0);
+    const tip = document.createElement('div');
+    tip.className = 'sdg-tip';
+    tip.hidden = true;
+    el.append(tip);
+    const years = [...new Set(all.map((d) => d.year))].sort((a, b) => a - b);
+    const at = (arr, yr) => arr.find((d) => d.year === yr);
+    svg.append('rect').attr('x', left).attr('y', 0).attr('width', Math.max(0, W - 12 - left)).attr('height', H - 28).style('fill', 'transparent')
+      .on('pointermove', (event) => {
+        const [mx] = d3.pointer(event);
+        const yr = years.reduce((best, v) => (Math.abs(x(v) - mx) < Math.abs(x(best) - mx) ? v : best), years[0]);
+        const a = at(mine, yr), b = at(world, yr);
+        guide.attr('x1', x(yr)).attr('x2', x(yr)).style('opacity', 1);
+        tip.replaceChildren();
+        const head = document.createElement('strong'); head.textContent = String(yr); tip.append(head);
+        const lineOf = (label, d) => { const s2 = document.createElement('span'); s2.textContent = `${label}: ${d ? window.sdgFmt(d.value) : 'no data'}`; tip.append(s2, document.createElement('br')); };
+        lineOf(country, a);
+        if (other.length || (compare && compare !== country)) lineOf(compare, at(other, yr));
+        lineOf('World', b);
+        tip.hidden = false;
+        const px = x(yr) * (el.clientWidth / W);
+        const tw = tip.offsetWidth;
+        tip.style.left = Math.max(0, Math.min(el.clientWidth - tw, px + 10 + tw > el.clientWidth ? px - tw - 10 : px + 10)) + 'px';
+        tip.style.top = '8px';
+      })
+      .on('pointerleave', () => { tip.hidden = true; guide.style('opacity', 0); });
+  });
+</script>

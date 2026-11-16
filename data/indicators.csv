@@ -1,0 +1,10 @@
+indicator,series,goal,name,unit,better
+poverty,SI_POV_DAY1,1,Extreme poverty,% of population,lower
+hunger,SN_ITK_DEFC,2,Undernourishment,% of population,lower
+child_mortality,SH_DYN_MORT,3,Under-5 mortality,"deaths per 1,000 live births",lower
+school_completion,SE_TOT_CPLR,4,Lower-secondary completion,% of age group,higher
+women_parliament,SG_GEN_PARL,5,Women in parliament,% of seats,higher
+safe_water,SH_H2O_SAFE,6,Safely managed drinking water,% of population,higher
+electricity,EG_ACS_ELEC,7,Access to electricity,% of population,higher
+unemployment,SL_TLF_UEM,8,Unemployment,% of labour force (15+),lower
+internet,IT_USE_ii99,9,Internet use,% of population,higher
