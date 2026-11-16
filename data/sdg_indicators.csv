@@ -5099,31 +5099,6 @@ electricity,12,Algeria,2021,99.8
 electricity,12,Algeria,2022,100.0
 electricity,12,Algeria,2023,100.0
 electricity,12,Algeria,2024,100.0
-electricity,16,American Samoa,2000,nan
-electricity,16,American Samoa,2001,nan
-electricity,16,American Samoa,2002,nan
-electricity,16,American Samoa,2003,nan
-electricity,16,American Samoa,2004,nan
-electricity,16,American Samoa,2005,nan
-electricity,16,American Samoa,2006,nan
-electricity,16,American Samoa,2007,nan
-electricity,16,American Samoa,2008,nan
-electricity,16,American Samoa,2009,nan
-electricity,16,American Samoa,2010,nan
-electricity,16,American Samoa,2011,nan
-electricity,16,American Samoa,2012,nan
-electricity,16,American Samoa,2013,nan
-electricity,16,American Samoa,2014,nan
-electricity,16,American Samoa,2015,nan
-electricity,16,American Samoa,2016,nan
-electricity,16,American Samoa,2017,nan
-electricity,16,American Samoa,2018,nan
-electricity,16,American Samoa,2019,nan
-electricity,16,American Samoa,2020,nan
-electricity,16,American Samoa,2021,nan
-electricity,16,American Samoa,2022,nan
-electricity,16,American Samoa,2023,nan
-electricity,16,American Samoa,2024,nan
 electricity,20,Andorra,2000,100.0
 electricity,20,Andorra,2001,100.0
 electricity,20,Andorra,2002,100.0
@@ -6399,15 +6374,6 @@ electricity,384,Côte d'Ivoire,2021,71.1
 electricity,384,Côte d'Ivoire,2022,70.4
 electricity,384,Côte d'Ivoire,2023,72.4
 electricity,384,Côte d'Ivoire,2024,72.9
-electricity,408,Democratic People's Republic of Korea,2000,nan
-electricity,408,Democratic People's Republic of Korea,2001,nan
-electricity,408,Democratic People's Republic of Korea,2002,nan
-electricity,408,Democratic People's Republic of Korea,2003,nan
-electricity,408,Democratic People's Republic of Korea,2004,nan
-electricity,408,Democratic People's Republic of Korea,2005,nan
-electricity,408,Democratic People's Republic of Korea,2006,nan
-electricity,408,Democratic People's Republic of Korea,2007,nan
-electricity,408,Democratic People's Republic of Korea,2008,nan
 electricity,408,Democratic People's Republic of Korea,2009,26.0
 electricity,408,Democratic People's Republic of Korea,2010,29.3
 electricity,408,Democratic People's Republic of Korea,2011,31.4
@@ -7174,8 +7140,6 @@ electricity,324,Guinea,2021,46.8
 electricity,324,Guinea,2022,47.7
 electricity,324,Guinea,2023,51.1
 electricity,324,Guinea,2024,53.8
-electricity,624,Guinea-Bissau,2000,nan
-electricity,624,Guinea-Bissau,2001,nan
 electricity,624,Guinea-Bissau,2002,1.3
 electricity,624,Guinea-Bissau,2003,2.6
 electricity,624,Guinea-Bissau,2004,3.9
@@ -7824,13 +7788,6 @@ electricity,426,Lesotho,2021,50.4
 electricity,426,Lesotho,2022,50.0
 electricity,426,Lesotho,2023,57.3
 electricity,426,Lesotho,2024,60.6
-electricity,430,Liberia,2000,nan
-electricity,430,Liberia,2001,nan
-electricity,430,Liberia,2002,nan
-electricity,430,Liberia,2003,nan
-electricity,430,Liberia,2004,nan
-electricity,430,Liberia,2005,nan
-electricity,430,Liberia,2006,nan
 electricity,430,Liberia,2007,3.0
 electricity,430,Liberia,2008,1.3
 electricity,430,Liberia,2009,1.9
@@ -9599,13 +9556,6 @@ electricity,710,South Africa,2021,89.3
 electricity,710,South Africa,2022,86.5
 electricity,710,South Africa,2023,87.7
 electricity,710,South Africa,2024,90.2
-electricity,728,South Sudan,2000,nan
-electricity,728,South Sudan,2001,nan
-electricity,728,South Sudan,2002,nan
-electricity,728,South Sudan,2003,nan
-electricity,728,South Sudan,2004,nan
-electricity,728,South Sudan,2005,nan
-electricity,728,South Sudan,2006,nan
 electricity,728,South Sudan,2007,0.8
 electricity,728,South Sudan,2008,1.3
 electricity,728,South Sudan,2009,3.0
@@ -10523,7 +10473,6 @@ hunger,4,Afghanistan,2021,31.0
 hunger,4,Afghanistan,2022,32.0
 hunger,4,Afghanistan,2023,29.7
 hunger,4,Afghanistan,2024,27.8
-hunger,4,Afghanistan,2025,nan
 hunger,8,Albania,2001,4.8
 hunger,8,Albania,2002,5.9
 hunger,8,Albania,2003,7.3
@@ -10548,7 +10497,6 @@ hunger,8,Albania,2021,5.8
 hunger,8,Albania,2022,6.2
 hunger,8,Albania,2023,5.5
 hunger,8,Albania,2024,5.6
-hunger,8,Albania,2025,nan
 hunger,12,Algeria,2001,7.3
 hunger,12,Algeria,2002,6.7
 hunger,12,Algeria,2003,6.4
@@ -10567,7 +10515,6 @@ hunger,12,Algeria,2015,2.8
 hunger,12,Algeria,2016,2.9
 hunger,12,Algeria,2017,2.8
 hunger,12,Algeria,2018,2.6
-hunger,12,Algeria,2025,nan
 hunger,24,Angola,2001,67.8
 hunger,24,Angola,2002,63.6
 hunger,24,Angola,2003,57.5
@@ -10592,7 +10539,6 @@ hunger,24,Angola,2021,19.7
 hunger,24,Angola,2022,19.6
 hunger,24,Angola,2023,18.6
 hunger,24,Angola,2024,17.4
-hunger,24,Angola,2025,nan
 hunger,32,Argentina,2001,3.0
 hunger,32,Argentina,2002,3.7
 hunger,32,Argentina,2003,4.3
@@ -10617,7 +10563,6 @@ hunger,32,Argentina,2021,3.3
 hunger,32,Argentina,2022,3.3
 hunger,32,Argentina,2023,3.2
 hunger,32,Argentina,2024,2.8
-hunger,32,Argentina,2025,nan
 hunger,51,Armenia,2001,28.6
 hunger,51,Armenia,2002,26.9
 hunger,51,Armenia,2003,23.4
@@ -10627,16 +10572,12 @@ hunger,51,Armenia,2006,10.7
 hunger,51,Armenia,2007,7.5
 hunger,51,Armenia,2008,4.9
 hunger,51,Armenia,2009,3.1
-hunger,51,Armenia,2025,nan
-hunger,36,Australia,2025,nan
-hunger,40,Austria,2025,nan
 hunger,31,Azerbaijan,2001,17.8
 hunger,31,Azerbaijan,2002,14.4
 hunger,31,Azerbaijan,2003,11.4
 hunger,31,Azerbaijan,2004,8.2
 hunger,31,Azerbaijan,2005,5.3
 hunger,31,Azerbaijan,2006,3.1
-hunger,31,Azerbaijan,2025,nan
 hunger,50,Bangladesh,2001,15.4
 hunger,50,Bangladesh,2002,14.6
 hunger,50,Bangladesh,2003,14.7
@@ -10661,7 +10602,6 @@ hunger,50,Bangladesh,2021,9.2
 hunger,50,Bangladesh,2022,8.9
 hunger,50,Bangladesh,2023,8.7
 hunger,50,Bangladesh,2024,8.2
-hunger,50,Bangladesh,2025,nan
 hunger,52,Barbados,2001,6.8
 hunger,52,Barbados,2002,6.4
 hunger,52,Barbados,2003,6.0
@@ -10684,7 +10624,6 @@ hunger,52,Barbados,2021,4.4
 hunger,52,Barbados,2022,4.7
 hunger,52,Barbados,2023,5.0
 hunger,52,Barbados,2024,5.0
-hunger,52,Barbados,2025,nan
 hunger,112,Belarus,2001,2.7
 hunger,112,Belarus,2002,3.7
 hunger,112,Belarus,2003,4.5
@@ -10692,8 +10631,6 @@ hunger,112,Belarus,2004,4.8
 hunger,112,Belarus,2005,4.0
 hunger,112,Belarus,2006,3.2
 hunger,112,Belarus,2007,2.6
-hunger,112,Belarus,2025,nan
-hunger,56,Belgium,2025,nan
 hunger,84,Belize,2001,5.7
 hunger,84,Belize,2002,5.4
 hunger,84,Belize,2003,5.2
@@ -10718,7 +10655,6 @@ hunger,84,Belize,2021,4.6
 hunger,84,Belize,2022,4.7
 hunger,84,Belize,2023,4.6
 hunger,84,Belize,2024,4.4
-hunger,84,Belize,2025,nan
 hunger,204,Benin,2001,14.3
 hunger,204,Benin,2002,12.8
 hunger,204,Benin,2003,12.1
@@ -10743,7 +10679,6 @@ hunger,204,Benin,2021,11.9
 hunger,204,Benin,2022,11.9
 hunger,204,Benin,2023,11.6
 hunger,204,Benin,2024,11.1
-hunger,204,Benin,2025,nan
 hunger,68,Bolivia (Plurinational State of),2001,26.6
 hunger,68,Bolivia (Plurinational State of),2002,25.8
 hunger,68,Bolivia (Plurinational State of),2003,26.6
@@ -10768,11 +10703,9 @@ hunger,68,Bolivia (Plurinational State of),2021,16.5
 hunger,68,Bolivia (Plurinational State of),2022,17.7
 hunger,68,Bolivia (Plurinational State of),2023,18.6
 hunger,68,Bolivia (Plurinational State of),2024,19.5
-hunger,68,Bolivia (Plurinational State of),2025,nan
 hunger,70,Bosnia and Herzegovina,2001,3.5
 hunger,70,Bosnia and Herzegovina,2002,3.3
 hunger,70,Bosnia and Herzegovina,2003,2.8
-hunger,70,Bosnia and Herzegovina,2025,nan
 hunger,72,Botswana,2001,28.1
 hunger,72,Botswana,2002,28.5
 hunger,72,Botswana,2003,29.5
@@ -10797,7 +10730,6 @@ hunger,72,Botswana,2021,19.6
 hunger,72,Botswana,2022,19.0
 hunger,72,Botswana,2023,18.1
 hunger,72,Botswana,2024,18.2
-hunger,72,Botswana,2025,nan
 hunger,76,Brazil,2001,10.5
 hunger,76,Brazil,2002,9.1
 hunger,76,Brazil,2003,7.6
@@ -10813,7 +10745,6 @@ hunger,76,Brazil,2020,2.8
 hunger,76,Brazil,2021,3.5
 hunger,76,Brazil,2022,3.4
 hunger,76,Brazil,2023,2.7
-hunger,76,Brazil,2025,nan
 hunger,100,Bulgaria,2001,4.9
 hunger,100,Bulgaria,2002,5.2
 hunger,100,Bulgaria,2003,5.6
@@ -10834,7 +10765,6 @@ hunger,100,Bulgaria,2017,2.9
 hunger,100,Bulgaria,2018,2.6
 hunger,100,Bulgaria,2019,2.7
 hunger,100,Bulgaria,2020,2.6
-hunger,100,Bulgaria,2025,nan
 hunger,854,Burkina Faso,2001,22.4
 hunger,854,Burkina Faso,2002,20.4
 hunger,854,Burkina Faso,2003,18.5
@@ -10859,7 +10789,6 @@ hunger,854,Burkina Faso,2021,13.2
 hunger,854,Burkina Faso,2022,12.7
 hunger,854,Burkina Faso,2023,12.2
 hunger,854,Burkina Faso,2024,11.7
-hunger,854,Burkina Faso,2025,nan
 hunger,132,Cabo Verde,2001,16.1
 hunger,132,Cabo Verde,2002,16.1
 hunger,132,Cabo Verde,2003,15.8
@@ -10884,7 +10813,6 @@ hunger,132,Cabo Verde,2021,7.8
 hunger,132,Cabo Verde,2022,8.3
 hunger,132,Cabo Verde,2023,8.4
 hunger,132,Cabo Verde,2024,8.1
-hunger,132,Cabo Verde,2025,nan
 hunger,116,Cambodia,2001,19.7
 hunger,116,Cambodia,2002,17.8
 hunger,116,Cambodia,2003,16.6
@@ -10909,7 +10837,6 @@ hunger,116,Cambodia,2021,6.1
 hunger,116,Cambodia,2022,5.8
 hunger,116,Cambodia,2023,5.2
 hunger,116,Cambodia,2024,4.7
-hunger,116,Cambodia,2025,nan
 hunger,120,Cameroon,2001,24.2
 hunger,120,Cameroon,2002,22.0
 hunger,120,Cameroon,2003,19.6
@@ -10934,8 +10861,6 @@ hunger,120,Cameroon,2021,5.9
 hunger,120,Cameroon,2022,5.6
 hunger,120,Cameroon,2023,5.3
 hunger,120,Cameroon,2024,4.9
-hunger,120,Cameroon,2025,nan
-hunger,124,Canada,2025,nan
 hunger,140,Central African Republic,2001,35.9
 hunger,140,Central African Republic,2002,36.9
 hunger,140,Central African Republic,2003,37.1
@@ -10960,7 +10885,6 @@ hunger,140,Central African Republic,2021,29.2
 hunger,140,Central African Republic,2022,29.6
 hunger,140,Central African Republic,2023,29.8
 hunger,140,Central African Republic,2024,29.8
-hunger,140,Central African Republic,2025,nan
 hunger,148,Chad,2001,34.4
 hunger,148,Chad,2002,33.4
 hunger,148,Chad,2003,33.9
@@ -10985,7 +10909,6 @@ hunger,148,Chad,2021,30.0
 hunger,148,Chad,2022,30.6
 hunger,148,Chad,2023,32.5
 hunger,148,Chad,2024,33.6
-hunger,148,Chad,2025,nan
 hunger,152,Chile,2001,2.9
 hunger,152,Chile,2002,2.8
 hunger,152,Chile,2003,2.7
@@ -11006,7 +10929,6 @@ hunger,152,Chile,2017,3.4
 hunger,152,Chile,2018,3.3
 hunger,152,Chile,2019,2.9
 hunger,152,Chile,2020,2.6
-hunger,152,Chile,2025,nan
 hunger,156,China,2001,10.0
 hunger,156,China,2002,9.3
 hunger,156,China,2003,8.6
@@ -11016,7 +10938,6 @@ hunger,156,China,2006,6.0
 hunger,156,China,2007,4.9
 hunger,156,China,2008,3.9
 hunger,156,China,2009,2.9
-hunger,156,China,2025,nan
 hunger,170,Colombia,2001,8.6
 hunger,170,Colombia,2002,8.9
 hunger,170,Colombia,2003,9.6
@@ -11041,7 +10962,6 @@ hunger,170,Colombia,2021,4.1
 hunger,170,Colombia,2022,4.2
 hunger,170,Colombia,2023,4.2
 hunger,170,Colombia,2024,4.1
-hunger,170,Colombia,2025,nan
 hunger,174,Comoros,2001,24.7
 hunger,174,Comoros,2002,20.7
 hunger,174,Comoros,2003,18.0
@@ -11066,7 +10986,6 @@ hunger,174,Comoros,2021,15.4
 hunger,174,Comoros,2022,16.9
 hunger,174,Comoros,2023,17.2
 hunger,174,Comoros,2024,16.5
-hunger,174,Comoros,2025,nan
 hunger,178,Congo,2001,26.3
 hunger,178,Congo,2002,25.9
 hunger,178,Congo,2003,26.0
@@ -11091,7 +11010,6 @@ hunger,178,Congo,2021,25.8
 hunger,178,Congo,2022,25.6
 hunger,178,Congo,2023,25.6
 hunger,178,Congo,2024,25.0
-hunger,178,Congo,2025,nan
 hunger,188,Costa Rica,2001,4.6
 hunger,188,Costa Rica,2002,4.8
 hunger,188,Costa Rica,2003,4.9
@@ -11104,17 +11022,14 @@ hunger,188,Costa Rica,2009,2.9
 hunger,188,Costa Rica,2010,2.8
 hunger,188,Costa Rica,2011,2.6
 hunger,188,Costa Rica,2012,2.6
-hunger,188,Costa Rica,2025,nan
 hunger,191,Croatia,2001,10.6
 hunger,191,Croatia,2002,7.1
 hunger,191,Croatia,2003,5.4
 hunger,191,Croatia,2004,4.3
 hunger,191,Croatia,2005,3.3
 hunger,191,Croatia,2006,2.7
-hunger,191,Croatia,2025,nan
 hunger,192,Cuba,2023,2.8
 hunger,192,Cuba,2024,3.5
-hunger,192,Cuba,2025,nan
 hunger,196,Cyprus,2001,5.9
 hunger,196,Cyprus,2002,6.4
 hunger,196,Cyprus,2003,6.3
@@ -11122,8 +11037,6 @@ hunger,196,Cyprus,2004,5.7
 hunger,196,Cyprus,2005,4.7
 hunger,196,Cyprus,2006,3.8
 hunger,196,Cyprus,2007,3.0
-hunger,196,Cyprus,2025,nan
-hunger,203,Czechia,2025,nan
 hunger,384,Côte d'Ivoire,2001,18.9
 hunger,384,Côte d'Ivoire,2002,18.9
 hunger,384,Côte d'Ivoire,2003,18.3
@@ -11148,7 +11061,6 @@ hunger,384,Côte d'Ivoire,2021,9.9
 hunger,384,Côte d'Ivoire,2022,10.5
 hunger,384,Côte d'Ivoire,2023,11.4
 hunger,384,Côte d'Ivoire,2024,11.4
-hunger,384,Côte d'Ivoire,2025,nan
 hunger,408,Democratic People's Republic of Korea,2001,35.9
 hunger,408,Democratic People's Republic of Korea,2002,35.2
 hunger,408,Democratic People's Republic of Korea,2003,32.9
@@ -11167,13 +11079,6 @@ hunger,408,Democratic People's Republic of Korea,2015,45.2
 hunger,408,Democratic People's Republic of Korea,2016,46.0
 hunger,408,Democratic People's Republic of Korea,2017,47.5
 hunger,408,Democratic People's Republic of Korea,2018,47.0
-hunger,408,Democratic People's Republic of Korea,2019,nan
-hunger,408,Democratic People's Republic of Korea,2020,nan
-hunger,408,Democratic People's Republic of Korea,2021,nan
-hunger,408,Democratic People's Republic of Korea,2022,nan
-hunger,408,Democratic People's Republic of Korea,2023,nan
-hunger,408,Democratic People's Republic of Korea,2024,nan
-hunger,408,Democratic People's Republic of Korea,2025,nan
 hunger,180,Democratic Republic of the Congo,2001,26.8
 hunger,180,Democratic Republic of the Congo,2002,27.2
 hunger,180,Democratic Republic of the Congo,2003,27.2
@@ -11198,8 +11103,6 @@ hunger,180,Democratic Republic of the Congo,2021,35.5
 hunger,180,Democratic Republic of the Congo,2022,37.5
 hunger,180,Democratic Republic of the Congo,2023,39.4
 hunger,180,Democratic Republic of the Congo,2024,39.5
-hunger,180,Democratic Republic of the Congo,2025,nan
-hunger,208,Denmark,2025,nan
 hunger,262,Djibouti,2001,40.8
 hunger,262,Djibouti,2002,39.4
 hunger,262,Djibouti,2003,36.5
@@ -11224,7 +11127,6 @@ hunger,262,Djibouti,2021,13.7
 hunger,262,Djibouti,2022,14.2
 hunger,262,Djibouti,2023,14.8
 hunger,262,Djibouti,2024,14.7
-hunger,262,Djibouti,2025,nan
 hunger,212,Dominica,2001,3.7
 hunger,212,Dominica,2002,4.1
 hunger,212,Dominica,2003,4.4
@@ -11249,7 +11151,6 @@ hunger,212,Dominica,2021,4.1
 hunger,212,Dominica,2022,3.4
 hunger,212,Dominica,2023,3.2
 hunger,212,Dominica,2024,3.0
-hunger,212,Dominica,2025,nan
 hunger,214,Dominican Republic,2001,19.7
 hunger,214,Dominican Republic,2002,21.7
 hunger,214,Dominican Republic,2003,23.1
@@ -11273,7 +11174,6 @@ hunger,214,Dominican Republic,2020,5.2
 hunger,214,Dominican Republic,2021,4.7
 hunger,214,Dominican Republic,2022,3.6
 hunger,214,Dominican Republic,2023,2.8
-hunger,214,Dominican Republic,2025,nan
 hunger,218,Ecuador,2001,20.0
 hunger,218,Ecuador,2002,21.8
 hunger,218,Ecuador,2003,21.2
@@ -11298,7 +11198,6 @@ hunger,218,Ecuador,2021,13.6
 hunger,218,Ecuador,2022,12.8
 hunger,218,Ecuador,2023,11.9
 hunger,218,Ecuador,2024,10.8
-hunger,218,Ecuador,2025,nan
 hunger,818,Egypt,2001,4.8
 hunger,818,Egypt,2002,5.0
 hunger,818,Egypt,2003,5.5
@@ -11323,7 +11222,6 @@ hunger,818,Egypt,2021,8.0
 hunger,818,Egypt,2022,8.5
 hunger,818,Egypt,2023,8.6
 hunger,818,Egypt,2024,8.4
-hunger,818,Egypt,2025,nan
 hunger,222,El Salvador,2001,7.0
 hunger,222,El Salvador,2002,6.9
 hunger,222,El Salvador,2003,7.6
@@ -11348,12 +11246,10 @@ hunger,222,El Salvador,2021,6.4
 hunger,222,El Salvador,2022,6.2
 hunger,222,El Salvador,2023,6.0
 hunger,222,El Salvador,2024,5.3
-hunger,222,El Salvador,2025,nan
 hunger,233,Estonia,2001,3.6
 hunger,233,Estonia,2002,3.6
 hunger,233,Estonia,2003,3.4
 hunger,233,Estonia,2004,2.9
-hunger,233,Estonia,2025,nan
 hunger,748,Eswatini,2001,9.9
 hunger,748,Eswatini,2002,9.3
 hunger,748,Eswatini,2003,9.0
@@ -11378,7 +11274,6 @@ hunger,748,Eswatini,2021,13.5
 hunger,748,Eswatini,2022,14.1
 hunger,748,Eswatini,2023,14.6
 hunger,748,Eswatini,2024,15.1
-hunger,748,Eswatini,2025,nan
 hunger,231,Ethiopia,2001,46.1
 hunger,231,Ethiopia,2002,43.2
 hunger,231,Ethiopia,2003,41.6
@@ -11403,7 +11298,6 @@ hunger,231,Ethiopia,2021,20.8
 hunger,231,Ethiopia,2022,20.6
 hunger,231,Ethiopia,2023,20.6
 hunger,231,Ethiopia,2024,19.9
-hunger,231,Ethiopia,2025,nan
 hunger,242,Fiji,2001,3.6
 hunger,242,Fiji,2002,3.5
 hunger,242,Fiji,2003,3.6
@@ -11428,9 +11322,6 @@ hunger,242,Fiji,2021,6.5
 hunger,242,Fiji,2022,7.4
 hunger,242,Fiji,2023,7.0
 hunger,242,Fiji,2024,7.2
-hunger,242,Fiji,2025,nan
-hunger,246,Finland,2025,nan
-hunger,250,France,2025,nan
 hunger,258,French Polynesia,2001,6.3
 hunger,258,French Polynesia,2002,6.1
 hunger,258,French Polynesia,2003,5.8
@@ -11454,7 +11345,6 @@ hunger,258,French Polynesia,2020,2.5
 hunger,258,French Polynesia,2022,2.5
 hunger,258,French Polynesia,2023,2.6
 hunger,258,French Polynesia,2024,2.6
-hunger,258,French Polynesia,2025,nan
 hunger,266,Gabon,2001,10.6
 hunger,266,Gabon,2002,12.0
 hunger,266,Gabon,2003,13.1
@@ -11479,7 +11369,6 @@ hunger,266,Gabon,2021,19.4
 hunger,266,Gabon,2022,20.4
 hunger,266,Gabon,2023,22.1
 hunger,266,Gabon,2024,23.3
-hunger,266,Gabon,2025,nan
 hunger,270,Gambia,2001,16.9
 hunger,270,Gambia,2002,18.9
 hunger,270,Gambia,2003,19.9
@@ -11504,7 +11393,6 @@ hunger,270,Gambia,2021,20.3
 hunger,270,Gambia,2022,20.2
 hunger,270,Gambia,2023,18.5
 hunger,270,Gambia,2024,17.5
-hunger,270,Gambia,2025,nan
 hunger,268,Georgia,2001,6.6
 hunger,268,Georgia,2002,5.0
 hunger,268,Georgia,2003,4.3
@@ -11528,8 +11416,6 @@ hunger,268,Georgia,2020,5.5
 hunger,268,Georgia,2021,5.4
 hunger,268,Georgia,2022,3.8
 hunger,268,Georgia,2023,2.7
-hunger,268,Georgia,2025,nan
-hunger,276,Germany,2025,nan
 hunger,288,Ghana,2001,14.8
 hunger,288,Ghana,2002,13.4
 hunger,288,Ghana,2003,12.6
@@ -11554,8 +11440,6 @@ hunger,288,Ghana,2021,5.6
 hunger,288,Ghana,2022,5.9
 hunger,288,Ghana,2023,6.5
 hunger,288,Ghana,2024,6.4
-hunger,288,Ghana,2025,nan
-hunger,300,Greece,2025,nan
 hunger,320,Guatemala,2001,22.5
 hunger,320,Guatemala,2002,20.2
 hunger,320,Guatemala,2003,19.3
@@ -11580,7 +11464,6 @@ hunger,320,Guatemala,2021,14.0
 hunger,320,Guatemala,2022,14.0
 hunger,320,Guatemala,2023,13.1
 hunger,320,Guatemala,2024,12.7
-hunger,320,Guatemala,2025,nan
 hunger,324,Guinea,2001,18.0
 hunger,324,Guinea,2002,17.8
 hunger,324,Guinea,2003,16.9
@@ -11605,7 +11488,6 @@ hunger,324,Guinea,2021,8.2
 hunger,324,Guinea,2022,8.0
 hunger,324,Guinea,2023,8.9
 hunger,324,Guinea,2024,8.7
-hunger,324,Guinea,2025,nan
 hunger,624,Guinea-Bissau,2001,15.6
 hunger,624,Guinea-Bissau,2002,16.0
 hunger,624,Guinea-Bissau,2003,16.5
@@ -11630,7 +11512,6 @@ hunger,624,Guinea-Bissau,2021,19.4
 hunger,624,Guinea-Bissau,2022,21.9
 hunger,624,Guinea-Bissau,2023,21.8
 hunger,624,Guinea-Bissau,2024,20.0
-hunger,624,Guinea-Bissau,2025,nan
 hunger,328,Guyana,2001,5.7
 hunger,328,Guyana,2002,5.7
 hunger,328,Guyana,2003,6.1
@@ -11651,7 +11532,6 @@ hunger,328,Guyana,2017,3.3
 hunger,328,Guyana,2018,3.2
 hunger,328,Guyana,2019,3.0
 hunger,328,Guyana,2020,2.9
-hunger,328,Guyana,2025,nan
 hunger,332,Haiti,2001,48.0
 hunger,332,Haiti,2002,50.1
 hunger,332,Haiti,2003,50.2
@@ -11676,7 +11556,6 @@ hunger,332,Haiti,2021,47.5
 hunger,332,Haiti,2022,50.4
 hunger,332,Haiti,2023,52.6
 hunger,332,Haiti,2024,51.4
-hunger,332,Haiti,2025,nan
 hunger,340,Honduras,2001,21.1
 hunger,340,Honduras,2002,20.4
 hunger,340,Honduras,2003,20.0
@@ -11701,11 +11580,8 @@ hunger,340,Honduras,2021,14.2
 hunger,340,Honduras,2022,14.2
 hunger,340,Honduras,2023,14.6
 hunger,340,Honduras,2024,14.3
-hunger,340,Honduras,2025,nan
 hunger,348,Hungary,2004,2.5
 hunger,348,Hungary,2005,2.5
-hunger,348,Hungary,2025,nan
-hunger,352,Iceland,2025,nan
 hunger,356,India,2001,18.1
 hunger,356,India,2002,19.7
 hunger,356,India,2003,21.2
@@ -11730,7 +11606,6 @@ hunger,356,India,2021,13.9
 hunger,356,India,2022,13.2
 hunger,356,India,2023,11.5
 hunger,356,India,2024,9.8
-hunger,356,India,2025,nan
 hunger,360,Indonesia,2001,18.1
 hunger,360,Indonesia,2002,18.1
 hunger,360,Indonesia,2003,18.0
@@ -11755,7 +11630,6 @@ hunger,360,Indonesia,2021,6.7
 hunger,360,Indonesia,2022,6.6
 hunger,360,Indonesia,2023,6.5
 hunger,360,Indonesia,2024,6.3
-hunger,360,Indonesia,2025,nan
 hunger,364,Iran (Islamic Republic of),2001,4.9
 hunger,364,Iran (Islamic Republic of),2002,5.2
 hunger,364,Iran (Islamic Republic of),2003,5.5
@@ -11780,7 +11654,6 @@ hunger,364,Iran (Islamic Republic of),2021,6.8
 hunger,364,Iran (Islamic Republic of),2022,6.6
 hunger,364,Iran (Islamic Republic of),2023,6.7
 hunger,364,Iran (Islamic Republic of),2024,6.7
-hunger,364,Iran (Islamic Republic of),2025,nan
 hunger,368,Iraq,2001,20.1
 hunger,368,Iraq,2002,19.5
 hunger,368,Iraq,2003,18.4
@@ -11805,10 +11678,6 @@ hunger,368,Iraq,2021,13.9
 hunger,368,Iraq,2022,13.5
 hunger,368,Iraq,2023,13.3
 hunger,368,Iraq,2024,13.4
-hunger,368,Iraq,2025,nan
-hunger,372,Ireland,2025,nan
-hunger,376,Israel,2025,nan
-hunger,380,Italy,2025,nan
 hunger,388,Jamaica,2001,7.2
 hunger,388,Jamaica,2002,6.7
 hunger,388,Jamaica,2003,6.8
@@ -11833,8 +11702,6 @@ hunger,388,Jamaica,2021,7.8
 hunger,388,Jamaica,2022,7.9
 hunger,388,Jamaica,2023,8.1
 hunger,388,Jamaica,2024,8.0
-hunger,388,Jamaica,2025,nan
-hunger,392,Japan,2025,nan
 hunger,400,Jordan,2001,9.0
 hunger,400,Jordan,2002,7.2
 hunger,400,Jordan,2003,6.0
@@ -11859,7 +11726,6 @@ hunger,400,Jordan,2021,18.7
 hunger,400,Jordan,2022,16.4
 hunger,400,Jordan,2023,13.2
 hunger,400,Jordan,2024,12.2
-hunger,400,Jordan,2025,nan
 hunger,398,Kazakhstan,2001,6.5
 hunger,398,Kazakhstan,2002,6.6
 hunger,398,Kazakhstan,2003,7.2
@@ -11880,7 +11746,6 @@ hunger,398,Kazakhstan,2017,3.6
 hunger,398,Kazakhstan,2018,3.0
 hunger,398,Kazakhstan,2019,2.6
 hunger,398,Kazakhstan,2020,2.5
-hunger,398,Kazakhstan,2025,nan
 hunger,404,Kenya,2001,31.8
 hunger,404,Kenya,2002,33.3
 hunger,404,Kenya,2003,34.5
@@ -11905,7 +11770,6 @@ hunger,404,Kenya,2021,33.4
 hunger,404,Kenya,2022,36.2
 hunger,404,Kenya,2023,36.4
 hunger,404,Kenya,2024,34.9
-hunger,404,Kenya,2025,nan
 hunger,296,Kiribati,2001,4.3
 hunger,296,Kiribati,2002,4.4
 hunger,296,Kiribati,2003,4.6
@@ -11930,8 +11794,6 @@ hunger,296,Kiribati,2021,4.7
 hunger,296,Kiribati,2022,4.4
 hunger,296,Kiribati,2023,4.1
 hunger,296,Kiribati,2024,3.8
-hunger,296,Kiribati,2025,nan
-hunger,414,Kuwait,2025,nan
 hunger,417,Kyrgyzstan,2001,12.9
 hunger,417,Kyrgyzstan,2002,11.0
 hunger,417,Kyrgyzstan,2003,8.9
@@ -11956,7 +11818,6 @@ hunger,417,Kyrgyzstan,2021,6.8
 hunger,417,Kyrgyzstan,2022,6.0
 hunger,417,Kyrgyzstan,2023,4.9
 hunger,417,Kyrgyzstan,2024,4.8
-hunger,417,Kyrgyzstan,2025,nan
 hunger,418,Lao People's Democratic Republic,2001,30.9
 hunger,418,Lao People's Democratic Republic,2002,29.2
 hunger,418,Lao People's Democratic Republic,2003,26.2
@@ -11981,12 +11842,10 @@ hunger,418,Lao People's Democratic Republic,2021,8.7
 hunger,418,Lao People's Democratic Republic,2022,9.1
 hunger,418,Lao People's Democratic Republic,2023,9.5
 hunger,418,Lao People's Democratic Republic,2024,10.0
-hunger,418,Lao People's Democratic Republic,2025,nan
 hunger,428,Latvia,2001,5.2
 hunger,428,Latvia,2002,3.8
 hunger,428,Latvia,2003,3.0
 hunger,428,Latvia,2004,2.5
-hunger,428,Latvia,2025,nan
 hunger,422,Lebanon,2001,7.4
 hunger,422,Lebanon,2002,8.1
 hunger,422,Lebanon,2003,8.5
@@ -12011,7 +11870,6 @@ hunger,422,Lebanon,2021,11.6
 hunger,422,Lebanon,2022,11.9
 hunger,422,Lebanon,2023,11.4
 hunger,422,Lebanon,2024,11.1
-hunger,422,Lebanon,2025,nan
 hunger,430,Liberia,2001,35.0
 hunger,430,Liberia,2002,36.2
 hunger,430,Liberia,2003,35.9
@@ -12036,7 +11894,6 @@ hunger,430,Liberia,2021,38.2
 hunger,430,Liberia,2022,38.1
 hunger,430,Liberia,2023,38.2
 hunger,430,Liberia,2024,37.3
-hunger,430,Liberia,2025,nan
 hunger,434,Libya,2001,3.7
 hunger,434,Libya,2002,4.0
 hunger,434,Libya,2003,4.3
@@ -12061,9 +11918,6 @@ hunger,434,Libya,2021,15.6
 hunger,434,Libya,2022,16.5
 hunger,434,Libya,2023,17.9
 hunger,434,Libya,2024,18.7
-hunger,434,Libya,2025,nan
-hunger,440,Lithuania,2025,nan
-hunger,442,Luxembourg,2025,nan
 hunger,450,Madagascar,2001,33.4
 hunger,450,Madagascar,2002,34.8
 hunger,450,Madagascar,2003,36.1
@@ -12088,7 +11942,6 @@ hunger,450,Madagascar,2021,39.9
 hunger,450,Madagascar,2022,39.2
 hunger,450,Madagascar,2023,39.4
 hunger,450,Madagascar,2024,41.8
-hunger,450,Madagascar,2025,nan
 hunger,454,Malawi,2001,23.2
 hunger,454,Malawi,2002,23.4
 hunger,454,Malawi,2003,24.1
@@ -12113,7 +11966,6 @@ hunger,454,Malawi,2021,20.4
 hunger,454,Malawi,2022,20.9
 hunger,454,Malawi,2023,22.9
 hunger,454,Malawi,2024,24.5
-hunger,454,Malawi,2025,nan
 hunger,458,Malaysia,2001,2.5
 hunger,458,Malaysia,2002,2.8
 hunger,458,Malaysia,2003,2.9
@@ -12134,7 +11986,6 @@ hunger,458,Malaysia,2017,3.1
 hunger,458,Malaysia,2018,2.9
 hunger,458,Malaysia,2019,2.8
 hunger,458,Malaysia,2020,2.7
-hunger,458,Malaysia,2025,nan
 hunger,466,Mali,2001,14.3
 hunger,466,Mali,2002,13.5
 hunger,466,Mali,2003,13.5
@@ -12159,8 +12010,6 @@ hunger,466,Mali,2021,7.3
 hunger,466,Mali,2022,9.9
 hunger,466,Mali,2023,12.1
 hunger,466,Mali,2024,12.1
-hunger,466,Mali,2025,nan
-hunger,470,Malta,2025,nan
 hunger,478,Mauritania,2001,9.8
 hunger,478,Mauritania,2002,9.2
 hunger,478,Mauritania,2003,9.4
@@ -12185,7 +12034,6 @@ hunger,478,Mauritania,2021,9.0
 hunger,478,Mauritania,2022,9.9
 hunger,478,Mauritania,2023,10.5
 hunger,478,Mauritania,2024,11.0
-hunger,478,Mauritania,2025,nan
 hunger,480,Mauritius,2001,5.9
 hunger,480,Mauritius,2002,5.8
 hunger,480,Mauritius,2003,5.6
@@ -12210,7 +12058,6 @@ hunger,480,Mauritius,2021,6.8
 hunger,480,Mauritius,2022,5.9
 hunger,480,Mauritius,2023,5.6
 hunger,480,Mauritius,2024,4.9
-hunger,480,Mauritius,2025,nan
 hunger,484,Mexico,2001,2.8
 hunger,484,Mexico,2002,3.2
 hunger,484,Mexico,2003,3.8
@@ -12235,7 +12082,6 @@ hunger,484,Mexico,2021,3.2
 hunger,484,Mexico,2022,3.3
 hunger,484,Mexico,2023,3.3
 hunger,484,Mexico,2024,3.1
-hunger,484,Mexico,2025,nan
 hunger,496,Mongolia,2001,30.0
 hunger,496,Mongolia,2002,29.4
 hunger,496,Mongolia,2003,29.6
@@ -12258,14 +12104,12 @@ hunger,496,Mongolia,2019,5.1
 hunger,496,Mongolia,2020,4.8
 hunger,496,Mongolia,2021,3.7
 hunger,496,Mongolia,2022,2.5
-hunger,496,Mongolia,2025,nan
 hunger,499,Montenegro,2001,9.4
 hunger,499,Montenegro,2002,9.0
 hunger,499,Montenegro,2003,7.5
 hunger,499,Montenegro,2004,5.7
 hunger,499,Montenegro,2005,4.1
 hunger,499,Montenegro,2006,3.0
-hunger,499,Montenegro,2025,nan
 hunger,504,Morocco,2001,5.8
 hunger,504,Morocco,2002,5.4
 hunger,504,Morocco,2003,5.1
@@ -12290,7 +12134,6 @@ hunger,504,Morocco,2021,6.5
 hunger,504,Morocco,2022,6.9
 hunger,504,Morocco,2023,6.9
 hunger,504,Morocco,2024,6.5
-hunger,504,Morocco,2025,nan
 hunger,508,Mozambique,2001,36.4
 hunger,508,Mozambique,2002,34.9
 hunger,508,Mozambique,2003,32.8
@@ -12315,7 +12158,6 @@ hunger,508,Mozambique,2021,22.7
 hunger,508,Mozambique,2022,21.7
 hunger,508,Mozambique,2023,21.2
 hunger,508,Mozambique,2024,22.3
-hunger,508,Mozambique,2025,nan
 hunger,104,Myanmar,2001,38.6
 hunger,104,Myanmar,2002,35.8
 hunger,104,Myanmar,2003,32.6
@@ -12340,7 +12182,6 @@ hunger,104,Myanmar,2021,4.2
 hunger,104,Myanmar,2022,4.8
 hunger,104,Myanmar,2023,4.7
 hunger,104,Myanmar,2024,4.6
-hunger,104,Myanmar,2025,nan
 hunger,516,Namibia,2001,15.7
 hunger,516,Namibia,2002,16.5
 hunger,516,Namibia,2003,17.7
@@ -12365,7 +12206,6 @@ hunger,516,Namibia,2021,21.3
 hunger,516,Namibia,2022,20.7
 hunger,516,Namibia,2023,20.3
 hunger,516,Namibia,2024,20.1
-hunger,516,Namibia,2025,nan
 hunger,524,Nepal,2001,23.7
 hunger,524,Nepal,2002,22.0
 hunger,524,Nepal,2003,20.0
@@ -12390,8 +12230,6 @@ hunger,524,Nepal,2021,5.3
 hunger,524,Nepal,2022,5.4
 hunger,524,Nepal,2023,5.3
 hunger,524,Nepal,2024,5.2
-hunger,524,Nepal,2025,nan
-hunger,528,Netherlands (Kingdom of the),2025,nan
 hunger,540,New Caledonia,2001,8.1
 hunger,540,New Caledonia,2002,8.3
 hunger,540,New Caledonia,2003,8.6
@@ -12416,8 +12254,6 @@ hunger,540,New Caledonia,2021,5.0
 hunger,540,New Caledonia,2022,4.7
 hunger,540,New Caledonia,2023,4.4
 hunger,540,New Caledonia,2024,4.1
-hunger,540,New Caledonia,2025,nan
-hunger,554,New Zealand,2025,nan
 hunger,558,Nicaragua,2001,25.8
 hunger,558,Nicaragua,2002,23.6
 hunger,558,Nicaragua,2003,23.4
@@ -12440,9 +12276,6 @@ hunger,558,Nicaragua,2019,15.7
 hunger,558,Nicaragua,2020,16.6
 hunger,558,Nicaragua,2021,17.0
 hunger,558,Nicaragua,2022,17.3
-hunger,558,Nicaragua,2023,nan
-hunger,558,Nicaragua,2024,nan
-hunger,558,Nicaragua,2025,nan
 hunger,562,Niger,2001,23.1
 hunger,562,Niger,2002,22.2
 hunger,562,Niger,2003,21.1
@@ -12467,7 +12300,6 @@ hunger,562,Niger,2021,11.7
 hunger,562,Niger,2022,13.0
 hunger,562,Niger,2023,13.1
 hunger,562,Niger,2024,12.9
-hunger,562,Niger,2025,nan
 hunger,566,Nigeria,2001,8.7
 hunger,566,Nigeria,2002,8.7
 hunger,566,Nigeria,2003,8.8
@@ -12492,7 +12324,6 @@ hunger,566,Nigeria,2021,17.7
 hunger,566,Nigeria,2022,19.3
 hunger,566,Nigeria,2023,20.8
 hunger,566,Nigeria,2024,22.2
-hunger,566,Nigeria,2025,nan
 hunger,807,North Macedonia,2001,6.7
 hunger,807,North Macedonia,2002,6.8
 hunger,807,North Macedonia,2003,5.3
@@ -12505,8 +12336,6 @@ hunger,807,North Macedonia,2009,3.1
 hunger,807,North Macedonia,2010,3.0
 hunger,807,North Macedonia,2011,2.8
 hunger,807,North Macedonia,2012,2.6
-hunger,807,North Macedonia,2025,nan
-hunger,578,Norway,2025,nan
 hunger,512,Oman,2001,16.3
 hunger,512,Oman,2002,15.1
 hunger,512,Oman,2003,14.1
@@ -12531,7 +12360,6 @@ hunger,512,Oman,2021,5.8
 hunger,512,Oman,2022,6.4
 hunger,512,Oman,2023,6.5
 hunger,512,Oman,2024,7.1
-hunger,512,Oman,2025,nan
 hunger,158,Other non-specified areas in Eastern Asia,2001,3.7
 hunger,158,Other non-specified areas in Eastern Asia,2002,4.1
 hunger,158,Other non-specified areas in Eastern Asia,2003,4.2
@@ -12556,7 +12384,6 @@ hunger,158,Other non-specified areas in Eastern Asia,2021,3.7
 hunger,158,Other non-specified areas in Eastern Asia,2022,3.8
 hunger,158,Other non-specified areas in Eastern Asia,2023,3.7
 hunger,158,Other non-specified areas in Eastern Asia,2024,3.6
-hunger,158,Other non-specified areas in Eastern Asia,2025,nan
 hunger,586,Pakistan,2001,20.4
 hunger,586,Pakistan,2002,21.0
 hunger,586,Pakistan,2003,20.2
@@ -12581,7 +12408,6 @@ hunger,586,Pakistan,2021,16.4
 hunger,586,Pakistan,2022,16.7
 hunger,586,Pakistan,2023,17.0
 hunger,586,Pakistan,2024,16.1
-hunger,586,Pakistan,2025,nan
 hunger,591,Panama,2001,23.3
 hunger,591,Panama,2002,19.4
 hunger,591,Panama,2003,17.4
@@ -12606,7 +12432,6 @@ hunger,591,Panama,2021,5.1
 hunger,591,Panama,2022,5.3
 hunger,591,Panama,2023,5.1
 hunger,591,Panama,2024,4.7
-hunger,591,Panama,2025,nan
 hunger,598,Papua New Guinea,2001,26.7
 hunger,598,Papua New Guinea,2002,27.4
 hunger,598,Papua New Guinea,2003,28.1
@@ -12631,7 +12456,6 @@ hunger,598,Papua New Guinea,2021,27.9
 hunger,598,Papua New Guinea,2022,29.3
 hunger,598,Papua New Guinea,2023,29.7
 hunger,598,Papua New Guinea,2024,30.5
-hunger,598,Papua New Guinea,2025,nan
 hunger,600,Paraguay,2001,10.3
 hunger,600,Paraguay,2002,9.1
 hunger,600,Paraguay,2003,8.6
@@ -12650,7 +12474,6 @@ hunger,600,Paraguay,2021,3.8
 hunger,600,Paraguay,2022,4.1
 hunger,600,Paraguay,2023,4.3
 hunger,600,Paraguay,2024,4.1
-hunger,600,Paraguay,2025,nan
 hunger,604,Peru,2001,20.4
 hunger,604,Peru,2002,21.8
 hunger,604,Peru,2003,22.1
@@ -12675,7 +12498,6 @@ hunger,604,Peru,2021,6.5
 hunger,604,Peru,2022,6.5
 hunger,604,Peru,2023,6.1
 hunger,604,Peru,2024,5.7
-hunger,604,Peru,2025,nan
 hunger,608,Philippines,2001,18.5
 hunger,608,Philippines,2002,18.3
 hunger,608,Philippines,2003,17.8
@@ -12700,13 +12522,9 @@ hunger,608,Philippines,2021,4.8
 hunger,608,Philippines,2022,3.9
 hunger,608,Philippines,2023,3.7
 hunger,608,Philippines,2024,3.4
-hunger,608,Philippines,2025,nan
-hunger,616,Poland,2025,nan
-hunger,620,Portugal,2025,nan
 hunger,410,Republic of Korea,2002,2.6
 hunger,410,Republic of Korea,2003,2.7
 hunger,410,Republic of Korea,2004,2.5
-hunger,410,Republic of Korea,2025,nan
 hunger,498,Republic of Moldova,2001,24.3
 hunger,498,Republic of Moldova,2002,26.9
 hunger,498,Republic of Moldova,2003,28.7
@@ -12723,12 +12541,9 @@ hunger,498,Republic of Moldova,2013,4.3
 hunger,498,Republic of Moldova,2014,3.8
 hunger,498,Republic of Moldova,2015,3.4
 hunger,498,Republic of Moldova,2016,2.7
-hunger,498,Republic of Moldova,2025,nan
-hunger,642,Romania,2025,nan
 hunger,643,Russian Federation,2001,4.2
 hunger,643,Russian Federation,2002,3.3
 hunger,643,Russian Federation,2003,2.7
-hunger,643,Russian Federation,2025,nan
 hunger,646,Rwanda,2001,37.6
 hunger,646,Rwanda,2002,34.3
 hunger,646,Rwanda,2003,32.4
@@ -12753,7 +12568,6 @@ hunger,646,Rwanda,2021,30.3
 hunger,646,Rwanda,2022,25.4
 hunger,646,Rwanda,2023,23.1
 hunger,646,Rwanda,2024,22.6
-hunger,646,Rwanda,2025,nan
 hunger,670,Saint Vincent and the Grenadines,2001,12.9
 hunger,670,Saint Vincent and the Grenadines,2002,11.3
 hunger,670,Saint Vincent and the Grenadines,2003,9.1
@@ -12778,7 +12592,6 @@ hunger,670,Saint Vincent and the Grenadines,2021,5.2
 hunger,670,Saint Vincent and the Grenadines,2022,4.7
 hunger,670,Saint Vincent and the Grenadines,2023,4.3
 hunger,670,Saint Vincent and the Grenadines,2024,4.0
-hunger,670,Saint Vincent and the Grenadines,2025,nan
 hunger,882,Samoa,2001,3.8
 hunger,882,Samoa,2002,3.7
 hunger,882,Samoa,2003,3.7
@@ -12803,7 +12616,6 @@ hunger,882,Samoa,2021,3.7
 hunger,882,Samoa,2022,3.8
 hunger,882,Samoa,2023,3.7
 hunger,882,Samoa,2024,3.4
-hunger,882,Samoa,2025,nan
 hunger,678,Sao Tome and Principe,2001,15.5
 hunger,678,Sao Tome and Principe,2002,13.8
 hunger,678,Sao Tome and Principe,2003,12.3
@@ -12828,7 +12640,6 @@ hunger,678,Sao Tome and Principe,2021,15.9
 hunger,678,Sao Tome and Principe,2022,18.6
 hunger,678,Sao Tome and Principe,2023,21.2
 hunger,678,Sao Tome and Principe,2024,23.0
-hunger,678,Sao Tome and Principe,2025,nan
 hunger,682,Saudi Arabia,2001,4.6
 hunger,682,Saudi Arabia,2002,4.8
 hunger,682,Saudi Arabia,2003,4.7
@@ -12843,7 +12654,6 @@ hunger,682,Saudi Arabia,2011,3.1
 hunger,682,Saudi Arabia,2012,3.2
 hunger,682,Saudi Arabia,2013,2.8
 hunger,682,Saudi Arabia,2014,2.7
-hunger,682,Saudi Arabia,2025,nan
 hunger,686,Senegal,2001,21.1
 hunger,686,Senegal,2002,19.9
 hunger,686,Senegal,2003,18.6
@@ -12868,12 +12678,10 @@ hunger,686,Senegal,2021,5.5
 hunger,686,Senegal,2022,5.4
 hunger,686,Senegal,2023,5.6
 hunger,686,Senegal,2024,5.3
-hunger,686,Senegal,2025,nan
 hunger,688,Serbia,2001,4.8
 hunger,688,Serbia,2002,4.6
 hunger,688,Serbia,2003,3.9
 hunger,688,Serbia,2004,3.0
-hunger,688,Serbia,2025,nan
 hunger,690,Seychelles,2005,2.8
 hunger,690,Seychelles,2006,3.1
 hunger,690,Seychelles,2007,3.5
@@ -12889,7 +12697,6 @@ hunger,690,Seychelles,2016,3.7
 hunger,690,Seychelles,2017,3.3
 hunger,690,Seychelles,2018,3.0
 hunger,690,Seychelles,2019,2.7
-hunger,690,Seychelles,2025,nan
 hunger,694,Sierra Leone,2001,50.0
 hunger,694,Sierra Leone,2002,49.2
 hunger,694,Sierra Leone,2003,46.9
@@ -12914,8 +12721,6 @@ hunger,694,Sierra Leone,2021,26.5
 hunger,694,Sierra Leone,2022,26.0
 hunger,694,Sierra Leone,2023,26.4
 hunger,694,Sierra Leone,2024,25.3
-hunger,694,Sierra Leone,2025,nan
-hunger,705,Slovenia,2025,nan
 hunger,90,Solomon Islands,2001,11.2
 hunger,90,Solomon Islands,2002,11.5
 hunger,90,Solomon Islands,2003,11.5
@@ -12940,7 +12745,6 @@ hunger,90,Solomon Islands,2021,25.3
 hunger,90,Solomon Islands,2022,27.9
 hunger,90,Solomon Islands,2023,28.1
 hunger,90,Solomon Islands,2024,27.0
-hunger,90,Solomon Islands,2025,nan
 hunger,706,Somalia,2001,70.0
 hunger,706,Somalia,2002,69.9
 hunger,706,Somalia,2003,69.8
@@ -12965,7 +12769,6 @@ hunger,706,Somalia,2021,52.0
 hunger,706,Somalia,2022,52.5
 hunger,706,Somalia,2023,54.5
 hunger,706,Somalia,2024,56.5
-hunger,706,Somalia,2025,nan
 hunger,710,South Africa,2001,3.6
 hunger,710,South Africa,2002,3.5
 hunger,710,South Africa,2003,3.4
@@ -12990,33 +12793,11 @@ hunger,710,South Africa,2021,9.6
 hunger,710,South Africa,2022,10.2
 hunger,710,South Africa,2023,10.5
 hunger,710,South Africa,2024,11.2
-hunger,710,South Africa,2025,nan
-hunger,728,South Sudan,2001,nan
-hunger,728,South Sudan,2002,nan
-hunger,728,South Sudan,2003,nan
-hunger,728,South Sudan,2004,nan
-hunger,728,South Sudan,2005,nan
-hunger,728,South Sudan,2006,nan
-hunger,728,South Sudan,2007,nan
-hunger,728,South Sudan,2008,nan
-hunger,728,South Sudan,2009,nan
-hunger,728,South Sudan,2010,nan
-hunger,728,South Sudan,2011,nan
-hunger,728,South Sudan,2012,nan
-hunger,728,South Sudan,2013,nan
-hunger,728,South Sudan,2014,nan
-hunger,728,South Sudan,2015,nan
-hunger,728,South Sudan,2016,nan
-hunger,728,South Sudan,2017,nan
-hunger,728,South Sudan,2018,nan
-hunger,728,South Sudan,2019,nan
 hunger,728,South Sudan,2020,21.8
 hunger,728,South Sudan,2021,21.4
 hunger,728,South Sudan,2022,20.2
 hunger,728,South Sudan,2023,19.5
 hunger,728,South Sudan,2024,19.1
-hunger,728,South Sudan,2025,nan
-hunger,724,Spain,2025,nan
 hunger,144,Sri Lanka,2001,16.8
 hunger,144,Sri Lanka,2002,16.1
 hunger,144,Sri Lanka,2003,15.9
@@ -13041,19 +12822,6 @@ hunger,144,Sri Lanka,2021,4.6
 hunger,144,Sri Lanka,2022,5.8
 hunger,144,Sri Lanka,2023,6.6
 hunger,144,Sri Lanka,2024,4.9
-hunger,144,Sri Lanka,2025,nan
-hunger,729,Sudan,2001,nan
-hunger,729,Sudan,2002,nan
-hunger,729,Sudan,2003,nan
-hunger,729,Sudan,2004,nan
-hunger,729,Sudan,2005,nan
-hunger,729,Sudan,2006,nan
-hunger,729,Sudan,2007,nan
-hunger,729,Sudan,2008,nan
-hunger,729,Sudan,2009,nan
-hunger,729,Sudan,2010,nan
-hunger,729,Sudan,2011,nan
-hunger,729,Sudan,2012,nan
 hunger,729,Sudan,2013,8.7
 hunger,729,Sudan,2014,8.5
 hunger,729,Sudan,2015,8.9
@@ -13063,10 +12831,6 @@ hunger,729,Sudan,2018,10.8
 hunger,729,Sudan,2019,10.8
 hunger,729,Sudan,2020,11.1
 hunger,729,Sudan,2021,10.9
-hunger,729,Sudan,2022,nan
-hunger,729,Sudan,2023,nan
-hunger,729,Sudan,2024,nan
-hunger,729,Sudan,2025,nan
 hunger,740,Suriname,2001,11.4
 hunger,740,Suriname,2002,10.9
 hunger,740,Suriname,2003,10.1
@@ -13091,9 +12855,6 @@ hunger,740,Suriname,2021,10.4
 hunger,740,Suriname,2022,11.5
 hunger,740,Suriname,2023,12.3
 hunger,740,Suriname,2024,12.7
-hunger,740,Suriname,2025,nan
-hunger,752,Sweden,2025,nan
-hunger,756,Switzerland,2025,nan
 hunger,760,Syrian Arab Republic,2001,7.5
 hunger,760,Syrian Arab Republic,2002,7.1
 hunger,760,Syrian Arab Republic,2003,6.8
@@ -13118,7 +12879,6 @@ hunger,760,Syrian Arab Republic,2021,33.7
 hunger,760,Syrian Arab Republic,2022,35.5
 hunger,760,Syrian Arab Republic,2023,38.2
 hunger,760,Syrian Arab Republic,2024,40.8
-hunger,760,Syrian Arab Republic,2025,nan
 hunger,762,Tajikistan,2001,40.0
 hunger,762,Tajikistan,2002,41.2
 hunger,762,Tajikistan,2003,41.7
@@ -13143,7 +12903,6 @@ hunger,762,Tajikistan,2021,10.4
 hunger,762,Tajikistan,2022,9.3
 hunger,762,Tajikistan,2023,8.5
 hunger,762,Tajikistan,2024,8.0
-hunger,762,Tajikistan,2025,nan
 hunger,764,Thailand,2001,17.3
 hunger,764,Thailand,2002,16.3
 hunger,764,Thailand,2003,14.9
@@ -13168,7 +12927,6 @@ hunger,764,Thailand,2021,5.3
 hunger,764,Thailand,2022,5.2
 hunger,764,Thailand,2023,5.2
 hunger,764,Thailand,2024,5.4
-hunger,764,Thailand,2025,nan
 hunger,626,Timor-Leste,2001,54.9
 hunger,626,Timor-Leste,2002,43.4
 hunger,626,Timor-Leste,2003,35.3
@@ -13193,7 +12951,6 @@ hunger,626,Timor-Leste,2021,15.9
 hunger,626,Timor-Leste,2022,15.3
 hunger,626,Timor-Leste,2023,16.1
 hunger,626,Timor-Leste,2024,16.9
-hunger,626,Timor-Leste,2025,nan
 hunger,768,Togo,2001,28.5
 hunger,768,Togo,2002,28.6
 hunger,768,Togo,2003,27.6
@@ -13218,7 +12975,6 @@ hunger,768,Togo,2021,15.8
 hunger,768,Togo,2022,13.2
 hunger,768,Togo,2023,11.3
 hunger,768,Togo,2024,10.2
-hunger,768,Togo,2025,nan
 hunger,780,Trinidad and Tobago,2001,10.3
 hunger,780,Trinidad and Tobago,2002,10.9
 hunger,780,Trinidad and Tobago,2003,11.6
@@ -13243,7 +12999,6 @@ hunger,780,Trinidad and Tobago,2021,10.4
 hunger,780,Trinidad and Tobago,2022,10.9
 hunger,780,Trinidad and Tobago,2023,10.7
 hunger,780,Trinidad and Tobago,2024,10.4
-hunger,780,Trinidad and Tobago,2025,nan
 hunger,788,Tunisia,2001,4.0
 hunger,788,Tunisia,2002,4.1
 hunger,788,Tunisia,2003,4.2
@@ -13266,7 +13021,6 @@ hunger,788,Tunisia,2021,3.1
 hunger,788,Tunisia,2022,3.2
 hunger,788,Tunisia,2023,3.1
 hunger,788,Tunisia,2024,2.8
-hunger,788,Tunisia,2025,nan
 hunger,795,Turkmenistan,2001,6.0
 hunger,795,Turkmenistan,2002,5.2
 hunger,795,Turkmenistan,2003,4.5
@@ -13291,7 +13045,6 @@ hunger,795,Turkmenistan,2021,3.7
 hunger,795,Turkmenistan,2022,4.0
 hunger,795,Turkmenistan,2023,4.2
 hunger,795,Turkmenistan,2024,4.1
-hunger,795,Turkmenistan,2025,nan
 hunger,792,Türkiye,2001,30.6
 hunger,792,Türkiye,2002,32.1
 hunger,792,Türkiye,2003,30.4
@@ -13301,7 +13054,6 @@ hunger,792,Türkiye,2006,12.6
 hunger,792,Türkiye,2007,7.9
 hunger,792,Türkiye,2008,4.9
 hunger,792,Türkiye,2009,3.1
-hunger,792,Türkiye,2025,nan
 hunger,800,Uganda,2001,21.2
 hunger,800,Uganda,2002,19.5
 hunger,800,Uganda,2003,18.4
@@ -13326,7 +13078,6 @@ hunger,800,Uganda,2021,26.5
 hunger,800,Uganda,2022,24.3
 hunger,800,Uganda,2023,21.6
 hunger,800,Uganda,2024,20.9
-hunger,800,Uganda,2025,nan
 hunger,804,Ukraine,2001,2.7
 hunger,804,Ukraine,2017,2.7
 hunger,804,Ukraine,2018,3.3
@@ -13336,7 +13087,6 @@ hunger,804,Ukraine,2021,6.4
 hunger,804,Ukraine,2022,7.4
 hunger,804,Ukraine,2023,9.0
 hunger,804,Ukraine,2024,10.8
-hunger,804,Ukraine,2025,nan
 hunger,784,United Arab Emirates,2004,2.5
 hunger,784,United Arab Emirates,2005,3.1
 hunger,784,United Arab Emirates,2006,3.8
@@ -13354,8 +13104,6 @@ hunger,784,United Arab Emirates,2017,3.4
 hunger,784,United Arab Emirates,2018,2.9
 hunger,784,United Arab Emirates,2019,2.8
 hunger,784,United Arab Emirates,2020,2.5
-hunger,784,United Arab Emirates,2025,nan
-hunger,826,United Kingdom of Great Britain and Northern Ireland,2025,nan
 hunger,834,United Republic of Tanzania,2001,32.8
 hunger,834,United Republic of Tanzania,2002,33.6
 hunger,834,United Republic of Tanzania,2003,32.1
@@ -13380,13 +13128,10 @@ hunger,834,United Republic of Tanzania,2021,23.0
 hunger,834,United Republic of Tanzania,2022,21.7
 hunger,834,United Republic of Tanzania,2023,20.2
 hunger,834,United Republic of Tanzania,2024,19.1
-hunger,834,United Republic of Tanzania,2025,nan
-hunger,840,United States of America,2025,nan
 hunger,858,Uruguay,2001,3.6
 hunger,858,Uruguay,2002,3.3
 hunger,858,Uruguay,2003,3.0
 hunger,858,Uruguay,2004,2.6
-hunger,858,Uruguay,2025,nan
 hunger,860,Uzbekistan,2001,18.9
 hunger,860,Uzbekistan,2002,20.4
 hunger,860,Uzbekistan,2003,18.9
@@ -13398,7 +13143,6 @@ hunger,860,Uzbekistan,2008,5.9
 hunger,860,Uzbekistan,2009,4.5
 hunger,860,Uzbekistan,2010,3.4
 hunger,860,Uzbekistan,2011,2.6
-hunger,860,Uzbekistan,2025,nan
 hunger,548,Vanuatu,2001,9.2
 hunger,548,Vanuatu,2002,9.1
 hunger,548,Vanuatu,2003,8.6
@@ -13423,7 +13167,6 @@ hunger,548,Vanuatu,2021,6.4
 hunger,548,Vanuatu,2022,6.6
 hunger,548,Vanuatu,2023,6.2
 hunger,548,Vanuatu,2024,5.8
-hunger,548,Vanuatu,2025,nan
 hunger,862,Venezuela (Bolivarian Republic of),2001,14.1
 hunger,862,Venezuela (Bolivarian Republic of),2002,14.2
 hunger,862,Venezuela (Bolivarian Republic of),2003,13.8
@@ -13443,7 +13186,6 @@ hunger,862,Venezuela (Bolivarian Republic of),2021,12.8
 hunger,862,Venezuela (Bolivarian Republic of),2022,7.2
 hunger,862,Venezuela (Bolivarian Republic of),2023,5.8
 hunger,862,Venezuela (Bolivarian Republic of),2024,5.3
-hunger,862,Venezuela (Bolivarian Republic of),2025,nan
 hunger,704,Viet Nam,2001,19.5
 hunger,704,Viet Nam,2002,17.7
 hunger,704,Viet Nam,2003,16.0
@@ -13468,7 +13210,6 @@ hunger,704,Viet Nam,2021,5.6
 hunger,704,Viet Nam,2022,5.9
 hunger,704,Viet Nam,2023,6.1
 hunger,704,Viet Nam,2024,6.1
-hunger,704,Viet Nam,2025,nan
 hunger,1,World,2000,12.8
 hunger,1,World,2001,13.0
 hunger,1,World,2002,13.2
@@ -13519,7 +13260,6 @@ hunger,894,Zambia,2021,35.7
 hunger,894,Zambia,2022,35.4
 hunger,894,Zambia,2023,38.5
 hunger,894,Zambia,2024,41.0
-hunger,894,Zambia,2025,nan
 hunger,716,Zimbabwe,2001,32.8
 hunger,716,Zimbabwe,2002,31.8
 hunger,716,Zimbabwe,2003,31.4
@@ -13544,7 +13284,6 @@ hunger,716,Zimbabwe,2021,25.6
 hunger,716,Zimbabwe,2022,22.7
 hunger,716,Zimbabwe,2023,20.1
 hunger,716,Zimbabwe,2024,18.4
-hunger,716,Zimbabwe,2025,nan
 internet,4,Afghanistan,2001,0.0
 internet,4,Afghanistan,2002,0.0
 internet,4,Afghanistan,2003,0.1
@@ -29623,10 +29362,6 @@ women_parliament,4,Afghanistan,2018,27.71
 women_parliament,4,Afghanistan,2020,27.02
 women_parliament,4,Afghanistan,2021,27.02
 women_parliament,4,Afghanistan,2022,27.02
-women_parliament,4,Afghanistan,2023,nan
-women_parliament,4,Afghanistan,2024,nan
-women_parliament,4,Afghanistan,2025,nan
-women_parliament,4,Afghanistan,2026,nan
 women_parliament,8,Albania,2000,5.16
 women_parliament,8,Albania,2001,5.16
 women_parliament,8,Albania,2002,5.71
@@ -29971,8 +29706,6 @@ women_parliament,50,Bangladesh,2021,20.86
 women_parliament,50,Bangladesh,2022,20.86
 women_parliament,50,Bangladesh,2023,20.86
 women_parliament,50,Bangladesh,2024,20.86
-women_parliament,50,Bangladesh,2025,nan
-women_parliament,50,Bangladesh,2026,nan
 women_parliament,52,Barbados,2000,10.71
 women_parliament,52,Barbados,2001,10.71
 women_parliament,52,Barbados,2002,10.71
@@ -31049,12 +30782,6 @@ women_parliament,232,Eritrea,2016,22.0
 women_parliament,232,Eritrea,2017,22.0
 women_parliament,232,Eritrea,2018,22.0
 women_parliament,232,Eritrea,2019,22.0
-women_parliament,232,Eritrea,2021,nan
-women_parliament,232,Eritrea,2022,nan
-women_parliament,232,Eritrea,2023,nan
-women_parliament,232,Eritrea,2024,nan
-women_parliament,232,Eritrea,2025,nan
-women_parliament,232,Eritrea,2026,nan
 women_parliament,233,Estonia,2000,17.82
 women_parliament,233,Estonia,2001,17.82
 women_parliament,233,Estonia,2002,17.82
@@ -31470,7 +31197,6 @@ women_parliament,624,Guinea-Bissau,2022,13.73
 women_parliament,624,Guinea-Bissau,2023,13.73
 women_parliament,624,Guinea-Bissau,2024,9.8
 women_parliament,624,Guinea-Bissau,2025,9.8
-women_parliament,624,Guinea-Bissau,2026,nan
 women_parliament,328,Guyana,2000,18.46
 women_parliament,328,Guyana,2001,18.46
 women_parliament,328,Guyana,2002,20.0
@@ -31519,12 +31245,6 @@ women_parliament,332,Haiti,2017,2.56
 women_parliament,332,Haiti,2018,2.54
 women_parliament,332,Haiti,2019,2.54
 women_parliament,332,Haiti,2020,2.54
-women_parliament,332,Haiti,2021,nan
-women_parliament,332,Haiti,2022,nan
-women_parliament,332,Haiti,2023,nan
-women_parliament,332,Haiti,2024,nan
-women_parliament,332,Haiti,2025,nan
-women_parliament,332,Haiti,2026,nan
 women_parliament,340,Honduras,2000,9.38
 women_parliament,340,Honduras,2001,9.38
 women_parliament,340,Honduras,2002,9.38
@@ -31980,8 +31700,6 @@ women_parliament,414,Kuwait,2021,1.54
 women_parliament,414,Kuwait,2022,1.61
 women_parliament,414,Kuwait,2023,6.25
 women_parliament,414,Kuwait,2024,3.08
-women_parliament,414,Kuwait,2025,nan
-women_parliament,414,Kuwait,2026,nan
 women_parliament,417,Kyrgyzstan,2000,1.43
 women_parliament,417,Kyrgyzstan,2001,2.33
 women_parliament,417,Kyrgyzstan,2002,10.0
@@ -32681,10 +32399,6 @@ women_parliament,104,Myanmar,2019,11.32
 women_parliament,104,Myanmar,2020,11.11
 women_parliament,104,Myanmar,2021,15.29
 women_parliament,104,Myanmar,2022,15.29
-women_parliament,104,Myanmar,2023,nan
-women_parliament,104,Myanmar,2024,nan
-women_parliament,104,Myanmar,2025,nan
-women_parliament,104,Myanmar,2026,nan
 women_parliament,516,Namibia,2000,22.22
 women_parliament,516,Namibia,2001,25.0
 women_parliament,516,Namibia,2002,25.0
@@ -32761,7 +32475,6 @@ women_parliament,524,Nepal,2022,33.58
 women_parliament,524,Nepal,2023,33.09
 women_parliament,524,Nepal,2024,33.09
 women_parliament,524,Nepal,2025,33.45
-women_parliament,524,Nepal,2026,nan
 women_parliament,528,Netherlands (Kingdom of the),2000,36.0
 women_parliament,528,Netherlands (Kingdom of the),2001,36.0
 women_parliament,528,Netherlands (Kingdom of the),2002,36.0
@@ -32866,8 +32579,6 @@ women_parliament,562,Niger,2020,16.96
 women_parliament,562,Niger,2021,25.9
 women_parliament,562,Niger,2022,25.9
 women_parliament,562,Niger,2023,30.72
-women_parliament,562,Niger,2024,nan
-women_parliament,562,Niger,2025,nan
 women_parliament,562,Niger,2026,19.59
 women_parliament,566,Nigeria,2001,3.42
 women_parliament,566,Nigeria,2002,3.42
@@ -33891,12 +33602,6 @@ women_parliament,729,Sudan,2016,30.52
 women_parliament,729,Sudan,2017,30.52
 women_parliament,729,Sudan,2018,30.52
 women_parliament,729,Sudan,2019,27.65
-women_parliament,729,Sudan,2021,nan
-women_parliament,729,Sudan,2022,nan
-women_parliament,729,Sudan,2023,nan
-women_parliament,729,Sudan,2024,nan
-women_parliament,729,Sudan,2025,nan
-women_parliament,729,Sudan,2026,nan
 women_parliament,736,Sudan [former],2000,8.75
 women_parliament,736,Sudan [former],2001,8.75
 women_parliament,736,Sudan [former],2002,9.72
@@ -34199,7 +33904,6 @@ women_parliament,788,Tunisia,2019,35.94
 women_parliament,788,Tunisia,2020,24.88
 women_parliament,788,Tunisia,2021,26.27
 women_parliament,788,Tunisia,2022,26.27
-women_parliament,788,Tunisia,2023,nan
 women_parliament,788,Tunisia,2024,15.69
 women_parliament,788,Tunisia,2025,15.79
 women_parliament,788,Tunisia,2026,15.79
@@ -34548,9 +34252,6 @@ women_parliament,862,Venezuela (Bolivarian Republic of),2018,22.16
 women_parliament,862,Venezuela (Bolivarian Republic of),2019,22.16
 women_parliament,862,Venezuela (Bolivarian Republic of),2020,22.16
 women_parliament,862,Venezuela (Bolivarian Republic of),2021,22.16
-women_parliament,862,Venezuela (Bolivarian Republic of),2022,nan
-women_parliament,862,Venezuela (Bolivarian Republic of),2023,nan
-women_parliament,862,Venezuela (Bolivarian Republic of),2024,nan
 women_parliament,862,Venezuela (Bolivarian Republic of),2025,32.13
 women_parliament,862,Venezuela (Bolivarian Republic of),2026,32.13
 women_parliament,704,Viet Nam,2000,26.0

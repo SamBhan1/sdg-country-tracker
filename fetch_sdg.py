@@ -6,6 +6,7 @@ Run:  python fetch_sdg.py      ->  data/sdg_indicators.csv, data/indicators.csv,
 """
 import csv
 import json
+import math
 import os
 import sys
 import urllib.request
@@ -88,6 +89,8 @@ def main():
             try:
                 val = float(r["value"])
             except (TypeError, ValueError):
+                continue
+            if not math.isfinite(val):  # the API reports some missing values as "NaN"
                 continue
             year = int(r["timePeriodStart"])
             prio = 0 if dims.get("Reporting Type") == "G" else 1

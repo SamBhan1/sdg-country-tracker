@@ -2,6 +2,8 @@
 
 Track how any country is doing on the UN Sustainable Development Goals (SDGs), and compare it with another country and the world.
 
+**Live site: <https://sambhan1.github.io/sdg-country-tracker/>**
+
 This project downloads nine headline SDG indicators for every country from the official **UN SDG Global Database** and turns them into one tidy dataset, plus an interactive dashboard built on it.
 
 > Independent project built on public UN data. It is not an official United Nations product and is not endorsed by the UN.
@@ -20,16 +22,27 @@ This project downloads nine headline SDG indicators for every country from the o
 | 8 · Decent work | Unemployment | `SL_TLF_UEM` | % of labour force aged 15+ | lower |
 | 9 · Infrastructure | Internet use | `IT_USE_ii99` | % of people | higher |
 
-## The dashboard
+## The site
 
-For the chosen country it shows:
+`index.html` is a single-page site, served by GitHub Pages straight from this repo. For the chosen country it shows:
 
+- a world map coloured by the chosen indicator; select any country to open it
 - a one-line summary of how many indicators have improved or slipped since 2015, when the Goals were adopted
 - a card per indicator with the latest value, change since 2015, the world figure and the share of countries it is ahead of
 - a trend chart against the world average and a comparison country
 - a head-to-head table of two countries across all nine indicators
 
-`dashboard/index.html` is the dashboard's page source. It runs inside a Claude data dashboard artifact, which supplies the `dash` runtime and d3, so it won't open on its own in a browser. The data files and script work anywhere.
+The address keeps the current view, so a link such as `#c=India&vs=Brazil&i=internet` opens that exact comparison.
+
+To run it on your own computer, serve the folder and open <http://localhost:8000>:
+
+```bash
+python -m http.server 8000
+```
+
+It uses [D3](https://d3js.org) and country shapes from [world-atlas](https://github.com/topojson/world-atlas) (Natural Earth), both loaded from a CDN.
+
+`dashboard/index.html` is an earlier version of the same page written for a Claude data dashboard. It needs that dashboard's runtime and won't open on its own.
 
 ## Data files
 
@@ -37,7 +50,7 @@ All in `data/`:
 
 | File | Contents |
 |---|---|
-| `sdg_indicators.csv` | `indicator, m49, country, year, value`: about 35,000 yearly values. `m49 = 1` is the World total. |
+| `sdg_indicators.csv` | `indicator, m49, country, year, value`: about 34,000 yearly values. `m49 = 1` is the World total. |
 | `indicators.csv` | The nine indicators: goal, UN series code, name, unit, and whether higher or lower is better. |
 | `countries.csv` | Every country with its M49 code and SDG region. |
 
@@ -56,7 +69,7 @@ The script calls `https://unstats.un.org/sdgapi/v1/sdg`. The UN updates most ser
 
 - **National totals only:** both sexes, all ages, urban and rural combined. Unemployment uses ages 15+, and school completion uses lower secondary.
 - **Comparable estimates first:** where a year has both a country's own figure and the UN's globally comparable estimate, the comparable estimate is used.
-- **Non-numeric values are dropped,** for example undernourishment reported as `<2.5`.
+- **Non-numeric values are dropped,** for example undernourishment reported as `<2.5` or `NaN`.
 - **"Since 2015"** compares the latest value with the first value from 2015 or later.
 
 ## Limitations
